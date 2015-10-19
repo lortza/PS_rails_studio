@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
-
+<h1>Projects</h1>
+<h3>These <%= pluralize(@projects.size, 'Project') %> Need Your Funding</h3>
 
 <div class="row"> 
 <% @projects.each do |project| %>
@@ -12,7 +12,6 @@
       <p style="text-align: right; margin-top: -16px;"><%= number_to_currency(project.target_pledge_amount) %></p>
     </div><!-- heading-->
     <div class="panel-body">
-      <p><%= project.description %></p>
       <p> <%= project.website %></p>
       <p><%= project.pledging_ends_on %></p>
     </div><!-- body-->
