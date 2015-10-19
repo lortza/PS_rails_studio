@@ -14,7 +14,8 @@
     <div class="panel-body">
       <p><%= truncate(project.description, length: 55, separator: " ") %></p></p>
       <p> <%= project.website %></p>
-      <p><%= project.pledging_ends_on %></p>
+      <p><%= date_status(project) %> </p>
+      <p>(<%= project.pledging_ends_on %>)</p>
     </div><!-- body-->
     <div class="panel-footer">
       <p style="text-align: right;"><%= link_to 'Show', project, class: "btn btn-sm btn-primary" %>
