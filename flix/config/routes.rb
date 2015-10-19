@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   #verb "url" => "controller#action"
   get "movies" => "movies#index"
-  get "movies/:id" => "movies#show"
+  get "movies/:id" => "movies#show", as: "movie"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
