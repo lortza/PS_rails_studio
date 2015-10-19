@@ -12,6 +12,7 @@
       <p style="text-align: right; margin-top: -16px;"><%= number_to_currency(project.target_pledge_amount) %></p>
     </div><!-- heading-->
     <div class="panel-body">
+      <p><%= truncate(project.description, length: 55, separator: " ") %></p></p>
       <p> <%= project.website %></p>
       <p><%= project.pledging_ends_on %></p>
     </div><!-- body-->
