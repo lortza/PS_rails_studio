@@ -1,4 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+
+<p id="notice"><%= notice %></p>
+
+
+<h1><%= @project.name %></h1>
+<p style="text-align: right; margin-top: -16px;"><%= number_to_currency(@project.target_pledge_amount) %></p>
+  <p><%= @project.description %></p></p>
+  <p> <%= @project.website %></p>
+  <p><%= date_status(@project) %> </p>
+  <p>(<%= @project.pledging_ends_on %>)</p>
+
+<%= link_to 'New Project', new_project_path, class: "btn btn-sm btn-success" %>
+
+<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-sm btn-info" %>
+<%= link_to 'Back', projects_path, class: "btn btn-sm btn-danger" %>
