@@ -1,6 +1,5 @@
 <h1><%= pluralize(@events.size, "Event") %> </h1>
 
-
 <% @events.each do |event| %>
 <article>
   <h2><%= link_to event.name, event %></h2>
