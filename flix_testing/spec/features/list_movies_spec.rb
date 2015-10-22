@@ -1,8 +1,8 @@
-require 'spec_helper'
+#require 'spec_helper'
 
 describe "Viewing the list of movies" do
   
-  it "shows the movies" do
+  it "lists all of the movies" do
 
     movie1 = Movie.create(title: "Iron Man",
                           rating: "PG-13",
