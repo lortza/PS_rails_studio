@@ -1,5 +1,5 @@
 describe "Navigating movies" do
-    # nav from show to index
+
   it "links from the show page to the index page" do
     movie = Movie.create(movie_attributes) #is a method from the attributes file
 
@@ -10,7 +10,7 @@ describe "Navigating movies" do
     expect(current_path).to eq(movies_path)
   end #it do
 
-  # nav from index to show
+
   it "links from the index page to each movie's show page" do
     movie = Movie.create(movie_attributes)
 
@@ -20,6 +20,5 @@ describe "Navigating movies" do
 
     expect(current_path).to eq(movie_path(movie))
   end #it do
-
 
 end #describe
