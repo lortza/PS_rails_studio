@@ -17,6 +17,13 @@ describe "Viewing an individual movie" do
     expect(page).to have_text(movie.released_on)
   end #it do
 
+  it "shows the date in US formatting" do
+    movie = Movie.create(movie_attributes(released_on: "02-05-2008"))
+    visit movie_url(movie)
+    expect(page).to have_text("May 2, 2008")
+
+  end #us formatted date
+
   it "shows total gross if tg exceeds $50M" do
     movie = Movie.create(movie_attributes(total_gross: 60000000.00))
     visit movie_url(movie)
