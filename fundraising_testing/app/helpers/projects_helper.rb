@@ -3,7 +3,7 @@ module ProjectsHelper
     if project.pledging_ends_on == nil
       "NIL"
     elsif project.expired?
-      "EXPIRED"
+      "All Done!"
     elsif project.ten_day_countdown?
       "#{project.count_remaining_days.to_i} Days Remaining!"
      elsif project.expires_today?

@@ -5,6 +5,8 @@ describe "Viewing the list of projects" do
   it "shows the projects" do
     #visit "http://example.com/projects"
 
+    #project = Project.create(project_attributes) # links to attributes file
+
     projectA = Project.create(name: "Start-Up Project",
                             description: "A description of a start-up project",
                             target_pledge_amount: 100.00,
