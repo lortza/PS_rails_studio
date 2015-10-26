@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "projects" => "projects#index"
   get "projects/:id" => "projects#show", as: "project"
   get "projects/:id/edit" => "projects#edit", as: "edit_project"
+  patch "projects/:id" => "projects#update"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
