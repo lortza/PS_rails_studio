@@ -1,6 +1,6 @@
 class Movie < ActiveRecord::Base
   def flop?
-    total_gross < 50000000 
+    total_gross < 5000 
   end #flop?
     
 end #Movie

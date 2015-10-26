@@ -1,0 +1,42 @@
+<h1><%= @movie.title %></h1>
+
+<%= form_for @movie do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :rating %><br>
+    <%= f.text_field :rating %>
+  </p>
+
+  <p>
+    <%= f.label :total_gross %><br>
+    <%= f.number_field :total_gross %>
+  </p>
+
+  <p>
+    <%= f.label :released_on %><br>
+    <%= f.date_field :released_on %>
+  </p>
+  
+  <%= f.submit %>
+
+<% end %>
+
+<%= link_to "Back", movie_path %> <!-- notice how it is movie_path (singluar) because it is linking to the individual instance of the movie's show page. a movies_path (plural) would link to all movies -->
+<!-- 
+  create_table "movies", force: :cascade do |t|
+    t.string   "title"
+    t.string   "rating"
+    t.decimal  "total_gross"
+    t.text     "description"
+    t.date     "released_on"
+
+     -->
