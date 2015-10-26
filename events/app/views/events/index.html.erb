@@ -1,5 +1,6 @@
 <h1><%= pluralize(@events.size, "Event") %> </h1>
 
+<%= link_to "Add New Event", new_event_path %>
 <% @events.each do |event| %>
 <article>
   <h2><%= link_to event.name, event %></h2>
@@ -25,6 +26,7 @@
 <footer>
   <p>Updated at: <%= @time %></p>
 </footer>
+
 
 
 
