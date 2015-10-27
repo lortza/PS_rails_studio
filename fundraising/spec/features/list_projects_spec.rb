@@ -37,5 +37,14 @@ describe "Viewing the list of projects" do
     expect(page).to have_text(projectA.pledging_ends_on)
     expect(page).to have_text(projectA.website)
   end #it do 
+
+  it "only shows projects that are accepting pledges" do
+    project = Project.new(project_attributes(pledging_ends_on: 1.day.ago))
+    project.save
+
+    visit projects_path
+
+    expect(page).not_to have_text(project.name)
+  end #doesn't show expired projects
   
 end #describe

@@ -17,6 +17,11 @@ class Project < ActiveRecord::Base
   def expires_today?
     pledging_ends_on == Date.today 
   end #expires_today?
+
+  def self.accepting_pledges
+     where("pledging_ends_on >= ?", Date.today)
+  end #accepting_pledges
+    
     
     
 end #Project
