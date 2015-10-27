@@ -26,6 +26,13 @@ class ProjectsController < ApplicationController
     @project.save
     redirect_to @project 
   end #create
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to projects_url
+  end #destroy
+    
     
     
   private
