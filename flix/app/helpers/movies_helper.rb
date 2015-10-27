@@ -8,4 +8,12 @@ module MoviesHelper
     end #if
   end #format_gross
 
+  def image_for(movie)
+    if movie.image_file_name.blank?
+      image_tag("placeholder.jpg")
+    else
+      image_tag(movie.image_file_name)
+    end # if
+  end #image_for(movie)
+
 end #MoviesHelper

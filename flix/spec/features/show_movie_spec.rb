@@ -15,6 +15,11 @@ describe "Viewing an individual movie" do
     expect(page).to have_text("$318,412,101.00")
     expect(page).to have_text(movie.description)
     expect(page).to have_text(movie.released_on)
+    expect(page).to have_text(movie.cast)
+    expect(page).to have_text(movie.director)
+    expect(page).to have_text(movie.duration)
+    expect(page).to have_selector("img[src$='#{movie.image_file_name}']")
+
   end #it do
 
   it "shows the date in US formatting" do
