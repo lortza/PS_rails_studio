@@ -30,6 +30,13 @@ class EventsController < ApplicationController
     @event.save # saves form info
     redirect_to @event # redirects to the show page
   end #create
+
+  def destroy
+    @event = Event.find(params[:id]) 
+    @event.destroy
+    redirect_to events_url
+  end #destroy
+    
     
 
   private
