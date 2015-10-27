@@ -39,7 +39,6 @@ describe "Viewing the list of movies" do
     movie = Movie.create(movie_attributes(released_on: "02-05-2008"))
     visit movies_url(movie)
     expect(page).to have_text("May 2, 2008")
-
   end #us formatted date
 
   it "shows total gross if tg exceeds $50M" do
@@ -53,5 +52,14 @@ describe "Viewing the list of movies" do
     visit movies_url(movie)
     expect(page).to have_text("Flop!")
   end #shows Flop
+
+  it "filters out unreleased movies" do
+    movie = Movie.create(movie_attributes(released_on: 1.year.from_now))
+    visit movies_path
+    expect(page).not_to have_text(movie.title)
+  end #unreleased
+
+  it "lists movies in order from most recent release date" do
+  end #sort by release date
 
 end #describe

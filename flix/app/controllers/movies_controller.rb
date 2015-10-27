@@ -1,6 +1,8 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.released
+    #@movies = Movie.where("released_on <= ?", Time.now).order("released_on desc")
+
   end #index
 
   def show

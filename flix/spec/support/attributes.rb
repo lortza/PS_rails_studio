@@ -1,6 +1,6 @@
 def movie_attributes(overrides = {})
   {
-    title: "Iron Man",
+    title: "Sample Movie Title",
     rating: "PG-13",
     total_gross: 318412101.00,
     description: "Tony Stark builds an armored suit to fight the throes of evil",
