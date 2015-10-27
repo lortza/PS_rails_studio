@@ -1,28 +1,5 @@
 <h1> <%= @event.name %></h1> 
 
-<%= form_for(@event) do |f| %>
-  <p> 
-    <%= f.label :name %><br>
-    <%= f.text_field :name %> <!-- the :name is what's populating the event name in the form field -->
-  </p>
-
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description, cols:40, rows: 7 %> <!-- cols and rows give a size dimension for the form field -->
-  </p>
-
-  <p> <%= f.label :location %><br>
-    <%= f.text_field :location %> 
-  </p>
-
-  <p> <%= f.label :price %><br>
-    <%= f.number_field :price %>  <!--  -->
-  </p>
-
-  <p> <%= f.label :starts_at %><br>
-    <%= f.datetime_select :starts_at %> 
-  </p>
-  <%= f.submit %>
-
-<% end %>
+<%= render "form" %>
+<%= link_to "Cancel", event_path %>
 
