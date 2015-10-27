@@ -10,5 +10,13 @@ module EventsHelper
       number_to_currency(event.price)
      end #if
   end #format_price
+
+  def image_for(event)#this will generate the guts of the <%=  %>
+    if event.image_file_name.blank?
+      image_tag "placeholder.png"
+    else
+      image_tag event.image_file_name
+    end #if
+  end #image_for(event)
     
 end #EventsHelper
