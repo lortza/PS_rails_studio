@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- .index-thumbnail img {
-  width: 200px;
- }
-
- .show-image img {
-  width: 500px;
- }

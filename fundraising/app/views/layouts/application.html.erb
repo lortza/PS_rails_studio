@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FundraisingTesting</title>
+  <title>ScrillaVilla</title>
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render "layouts/sidebar" %>
 
   <%= render "layouts/header" %>
 
-  <%= render "layouts/sidebar" %>
+  <div class="content">
 
-  <%= yield %>
+    <%= yield %>
+     
+  </div> <!-- content -->
 
   <%= render "layouts/footer" %>
 

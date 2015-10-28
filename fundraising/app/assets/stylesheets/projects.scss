@@ -1,3 +1,53 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+
+.index-listing {
+  margin-bottom: 50px;
+  background-color: white;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid $secondary;
+
+  img {
+    width: 200px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px; 
+    border-radius: 50%;
+  } /* img */
+
+  h2 {
+    font-family: Nunito;
+    font-weight: 400; 
+    font-size: 2em;
+    a {
+      color: $secondary;
+      text-decoration: none; 
+    } /* a */
+    a:hover {
+      color: lighten($secondary, 10%); 
+    } /* a:hover */
+  } /* h2 */
+
+  p {
+    a {
+       color: $p-links;
+       font-size: 80%; 
+       text-decoration: none;
+     } /* a */ 
+     a:hover {
+          color: lighten($p-links, 20%); 
+      } /* a:hover */       
+  } /* p */
+} /* index-listing */
+
+.show-listing {
+  img {
+     width: 500px; 
+   } /* img */
+} /* .show-listing */
+
