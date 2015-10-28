@@ -1,3 +1,60 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+
+.index-listing {
+  margin: 20px 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+  overflow: auto;
+  img {
+     float: left;
+     margin-right: 20px; 
+     width: 90px;
+     height: 130px;
+   } /* img */
+
+   h2 {
+     a {
+        color: black;
+        text-decoration: none; 
+      } /* a */ 
+      a:hover {
+           color: gray; 
+         } /* a:hover */
+              
+   } /* h2 */
+
+   h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.85em;
+    margin-bottom: 0.85em;
+   } /* h3 */
+
+   p {
+     margin-bottom: 0.5em; 
+   } /* p */   
+      
+} /* index-listing */
+
+.movie-details {
+  margin: 20px 0px;
+  img {
+     float: left;
+     margin-right: 20px; 
+     width: 150px;
+   } /* img */
+
+   p {
+     margin-bottom: 0.5em; 
+   } /* p */   
+      
+} /* movie-details */
+
+.action-links {
+  margin-top: 10px; 
+} /* .action-links */
+

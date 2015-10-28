@@ -1,14 +1,14 @@
 <h1><%= pluralize(@movies.size, 'Movie') %></h1>
 
 <% @movies.each do |movie| %>
-  <article>
+  <article class="index-listing">
     <header>
       <%= image_for(movie) %>
       <h2><%= link_to movie.title, movie %></h2>
       <h3><%= movie.cast %></h3>
     </header>
     <p>
-      <%= truncate(movie.description, length: 40, separator: ' ') %>
+      <%= truncate(movie.description, length: 40, separator: ' ') %> <%= link_to "read more", movie %>
     </p>
     <table>
       <tr>
