@@ -5,6 +5,9 @@
 <% @projects.each do |project| %>
   <article>
     <header>
+      <div class="index-thumbnail">
+         <%= image_for(project) %>
+      </div> <!-- index-thumbnail -->
       <h2><%= link_to project.name, project %></h2>
     </header>
     <p>
@@ -14,6 +17,10 @@
       <tr>
         <th>Target Pledge Amount:</th>
         <td><%= number_to_currency(project.target_pledge_amount) %></td>
+      </tr>
+      <tr>
+        <th>Team Members:</th>
+        <td><%= project.team_members %></td>
       </tr>
       <tr>
         <th>End Date:</th>

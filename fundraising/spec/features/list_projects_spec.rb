@@ -36,10 +36,12 @@ describe "Viewing the list of projects" do
     expect(page).to have_text("$100.00")
     expect(page).to have_text(projectA.pledging_ends_on)
     expect(page).to have_text(projectA.website)
+    expect(page).to have_selector("img[src$='#{projectA.image_file_name}']")
+
   end #it do 
 
   it "only shows projects that are accepting pledges" do
-    project = Project.new(project_attributes(pledging_ends_on: 1.day.ago))
+    project = Project.new(project_attributes(pledging_ends_on: 2.days.ago))
     project.save
 
     visit projects_path

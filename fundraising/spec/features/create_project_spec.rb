@@ -1,3 +1,4 @@
+#require 'pry'
 #require 'spec_helper'
 
 describe "Creating a new project" do
@@ -14,6 +15,8 @@ describe "Creating a new project" do
     fill_in "Target pledge amount", with: "75000000"
     fill_in "Pledging ends on", with: (Time.now.year - 1).to_s
     #select (Time.now.year - 1).to_s, :from => "pledging_ends_on_1i"
+    fill_in "Team members", with: "The team members"
+    fill_in "Image file name", with: "project.png"
 
     click_button 'Create Project'
 
