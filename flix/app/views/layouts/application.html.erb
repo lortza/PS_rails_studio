@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FlixTesting</title>
+  <title>FlixMovieDB</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render "layouts/header" %>
+  
+  <%= render "layouts/sidebar" %>
 
-<%= yield %>
+  <%= yield %>
 
-<%= render "footer" %>
+  <%= render "layouts/footer" %>
 
 </body>
 </html>
