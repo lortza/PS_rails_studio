@@ -1,0 +1,49 @@
+<h1>Flight Calculator</h1>
+<p>Choose the best date to buy your tickets</p>
+<p>OR</p>
+<p>Calculate the best date for a flight based on when you book</p>
+
+
+<%= form_for(@flight) do |f| %>
+  <% if @flight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
+
+      <ul>
+      <% @flight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul> 
+    </div>  <!-- error_explanation -->
+  <% end %>
+
+<div class="row">
+<table>
+  <tr>
+    <td>
+    <div class="field">
+      <%= f.label :flight_date %><br>
+      <%= f.date_field :flight_date %>
+    </td>
+    <td>
+    <div class="field">
+      <%= f.label :booking_date %><br>
+      <%= f.date_field :booking_date %>
+    </div>
+    </td>
+  </tr>
+
+</table>
+   
+</div> <!-- row -->
+  <div class="row">
+    <div class="actions">
+    <%= f.submit %>
+  </div>
+</div> <!-- row -->
+    
+<% end %>
+
+
+
+
