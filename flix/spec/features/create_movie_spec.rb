@@ -10,7 +10,7 @@ describe "Creating a new movie" do
 
     fill_in "Title", with: "New Movie Title"
     fill_in "Description", with: "Superheroes saving the world from villains"
-    fill_in "Rating", with: "PG-13"
+    select "PG-13", from: "movie_rating"
     fill_in "Total gross", with: "75000000"
     select (Time.now.year - 1).to_s, :from => "movie_released_on_1i"
     fill_in "Cast", with: "The award-winning cast"
@@ -24,4 +24,5 @@ describe "Creating a new movie" do
 
     expect(page).to have_text('New Movie Title')
   end
-end
+end #describe
+
