@@ -1,0 +1,11 @@
+<% if @movie.errors.any? %>
+  <section id="errors">
+    <header>
+      <h2>Oops! Your submission couldn't be saved.</h2>
+      <h3>Please correct the following <%= pluralize(@movie.errors.count, "error") %>:</h3>
+    </header>
+    <% @movie.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %> <!-- messages -->
+  </section>
+<% end %> <!-- if errors.any -->

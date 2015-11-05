@@ -1,4 +1,6 @@
 <%= form_for(@movie) do |f| %>
+<%= render "errors" %>
+
   <fieldset>
     <ol>
       <li class="required">
@@ -15,7 +17,7 @@
       </li>
       <li class="required">
         <%= f.label :released_on %>
-        <%= f.date_field :released_on %>
+        <%= f.date_select :released_on %>
       </li>
       <li class="required">
         <%= f.label :total_gross %>
