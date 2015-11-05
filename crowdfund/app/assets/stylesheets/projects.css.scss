@@ -189,16 +189,26 @@ ol#pledges {
 section#errors {
   margin: 1em 0;
   padding: 1em;
-  background: $errors-background-color;
+  border-radius: 10px;
+  border: 1px solid red;
+  overflow: auto;
+  // background: $errors-background-color;
 
   h2 {
     color: $errors-text-color;
     font-size: 1.25em;
-  }
+    margin: 0px;
+  }/* h2 */
 
   h3 {
     font-size: 1em;
-    margin: .5em 0;
+    margin: 0;
     font-weight: bold;
-  }
-}
+  } /* h3 */
+
+  img {
+    width: 100%;
+    padding-right: 20px;
+  } /* img */
+    
+}/* section#errors */
