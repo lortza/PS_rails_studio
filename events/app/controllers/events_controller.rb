@@ -17,8 +17,11 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id]) 
-    @event.update(event_params) #comes from provate method below
-    redirect_to event_path(@event) # or redirect_to @event
+    if @event.update(event_params) #comes from provate method below
+      redirect_to event_path(@event) # or redirect_to @event
+    else
+      render :edit # to correct any items that failed validation
+    end #if
   end #update
 
   def new
@@ -27,8 +30,11 @@ class EventsController < ApplicationController
 
   def create    
     @event = Event.new(event_params) # defines a new Event
-    @event.save # saves form info
-    redirect_to @event # redirects to the show page
+    if @event.save # saves form info
+      redirect_to @event # redirects to the show page
+    else
+      render :new #this keeps the valid data, but shows the form again to fill in the invalid info
+    end #if
   end #create
 
   def destroy
