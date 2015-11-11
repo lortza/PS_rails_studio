@@ -20,6 +20,8 @@ describe "Editing a project" do
     expect(current_path).to eq(project_path(project))
 
     expect(page).to have_text('Updated Project Name')
+
+    expect(page).to have_text('has been updated')
   end
 
 end

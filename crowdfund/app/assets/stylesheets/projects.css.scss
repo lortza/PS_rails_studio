@@ -167,7 +167,6 @@ ol#pledges {
 /* FLASHES */
 
 .flash {
-  color: $primary-text-color;
   border-radius: 4px;
   padding: 10px;
   margin: 0;
@@ -176,13 +175,15 @@ ol#pledges {
   box-shadow: #ffc 0 0 4px;
 
   &.notice {
+    color: darken($flash-notice-color, 60%);
     background-color: $flash-notice-color;
-  }
+  } /* notice */
 
   &.alert {
+    color: darken($flash-alert-color, 60%);
     background-color: $flash-alert-color;
-  }
-}
+  } /* alert */
+} /* flash */
 
 /* ERRORS */
 
