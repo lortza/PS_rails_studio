@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
 
+  has_many :registrations, dependent: :destroy
+
   validates :name, :location, presence: true
   validates :description, length: {minimum: 25}
   validates :price, numericality: {greater_than_or_equal_to: 0}
@@ -29,3 +31,5 @@ end #Event
     # t.text     "description"
     # t.string   "image_file_name"
     # t.integer  "capacity",        default: 1
+
+    
