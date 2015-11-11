@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
     if @project.update(project_params)
-      redirect_to @project, notice: "Success! #{@project.name} has been updated."
+      redirect_to @project, notice: "Success! #{@project.name} has been updated"
     else
       render :edit
     end #if
@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-    redirect_to @project, notice: "Success! #{@project.name} has been added."
+    redirect_to @project, notice: "Success! #{@project.name} has been added"
     else
       render :new
     end #if
@@ -36,7 +36,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-    redirect_to projects_url
+    redirect_to projects_url, alert: "#{@project.name} has been deleted"
   end
 
 private
