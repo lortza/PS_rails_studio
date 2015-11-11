@@ -183,22 +183,29 @@ ol#reviews {
 /* FLASHES */
 
 .flash {
-  color: $primary-text-color;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 0;
+  // color: $primary-text-color;
+  border-radius: 10px;
+  padding: 20px 0px;
+  margin: 0px 0px 20px 0px;
   text-align: center;
   text-transform: uppercase;
   box-shadow: #ffc 0 0 4px;
   
   &.notice {
+    color: darken($flash-notice-color, 60%);
     background-color: $flash-notice-color;
-  }
+  } /* notice */
 
   &.alert {
+    color: darken($flash-alert-color, 60%);
     background-color: $flash-alert-color;
-  }
-}
+  } /* alert */
+
+  &.danger {
+    color: darken($flash-danger-color, 60%);
+    background-color: $flash-danger-color;
+  } /* danger */
+} /* flash */
 
 /* ERRORS */
 
