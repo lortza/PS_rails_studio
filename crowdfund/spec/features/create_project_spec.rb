@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "Creating a new project" do
   it "saves the project and shows the new project's details" do
+    
     visit projects_url
-
     click_link 'Add New Project'
 
     expect(current_path).to eq(new_project_path)
@@ -19,7 +19,16 @@ describe "Creating a new project" do
     click_button 'Create Project'
 
     expect(current_path).to eq(project_path(Project.last))
-
     expect(page).to have_text('New Project Name')
-  end
-end
+    
+  end #saves and shows
+
+  it "shows a confirmation message upon creation" do
+    visit new_project_path
+    fill_in "Name", with: "New Project Name"
+    fill_in "Description", with: "A brand new project that's super duper"
+    fill_in "Target pledge amount", with: "3000"
+    click_button "Create Project"
+    expect(page).to have_text('added')
+  end # shows a confirmation message upon creation
+end #creating a new project

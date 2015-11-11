@@ -5417,3 +5417,180 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-11 10:55:03
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-11 10:55:03 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-11 11:15:29 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-11 17:15:29.514370')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (30.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 198ms (Views: 187.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-11 11:15:29 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-11 11:15:29 -0600
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-11-11 11:15:34 -0600
+Processing by ProjectsController#new as HTML
+  Rendered projects/_errors.html.erb (1.8ms)
+  Rendered projects/_form.html.erb (13.8ms)
+  Rendered projects/new.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-11-11 11:20:14 -0600
+Processing by ProjectsController#new as HTML
+  Rendered projects/_errors.html.erb (0.0ms)
+  Rendered projects/_form.html.erb (5.9ms)
+  Rendered projects/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Operation FleaBeGone", "description"=>"This is a task that requires more patience and vigilance than actual action.", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"11", "pledging_ends_on(3i)"=>"20", "target_pledge_amount"=>"2", "website"=>"", "team_members"=>"Zorro, Annie", "image_file_name"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-11-11 17:20:57.780371"], ["description", "This is a task that requires more patience and vigilance than actual action."], ["image_file_name", ""], ["name", "Operation FleaBeGone"], ["pledging_ends_on", "2015-11-20"], ["target_pledge_amount", 2.0], ["team_members", "Zorro, Annie"], ["updated_at", "2015-11-11 17:20:57.780371"], ["website", ""]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered projects/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-11 11:20:57 -0600
+
+
+Started GET "/projects/9/edit" for 127.0.0.1 at 2015-11-11 11:21:04 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered projects/_errors.html.erb (0.0ms)
+  Rendered projects/_form.html.erb (6.0ms)
+  Rendered projects/edit.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/projects/9" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Operation FleaBeGone", "description"=>"This is a task that requires more patience and vigilance than actual action.", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"11", "pledging_ends_on(3i)"=>"20", "target_pledge_amount"=>"2", "website"=>"www.nofleasonme.com", "team_members"=>"Zorro, Annie", "image_file_name"=>""}, "commit"=>"Update Project", "id"=>"9"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered projects/_errors.html.erb (2.9ms)
+  Rendered projects/_form.html.erb (10.7ms)
+  Rendered projects/edit.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started GET "/assets/catfail.jpg" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:18 -0600
+
+
+Started PATCH "/projects/9" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Operation FleaBeGone", "description"=>"This is a task that requires more patience and vigilance than actual action.", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"11", "pledging_ends_on(3i)"=>"20", "target_pledge_amount"=>"2", "website"=>"http://www.nofleasonme.com", "team_members"=>"Zorro, Annie", "image_file_name"=>""}, "commit"=>"Update Project", "id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "projects" SET "updated_at" = ?, "website" = ? WHERE "projects"."id" = 9[0m  [["updated_at", "2015-11-11 17:21:36.499133"], ["website", "http://www.nofleasonme.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered projects/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:36 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-11 11:21:36 -0600

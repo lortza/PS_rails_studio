@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-    redirect_to @project
+    redirect_to @project, notice: "Success! #{@project.name} has been added."
     else
       render :new
     end #if
