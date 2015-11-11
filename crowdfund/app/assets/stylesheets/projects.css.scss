@@ -183,6 +183,12 @@ ol#pledges {
     color: darken($flash-alert-color, 60%);
     background-color: $flash-alert-color;
   } /* alert */
+
+  &.danger {
+    color: darken($flash-danger-color, 60%);
+    background-color: $flash-danger-color; 
+  } /* &.danger */
+    
 } /* flash */
 
 /* ERRORS */
