@@ -18,7 +18,8 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id]) 
     if @event.update(event_params) #comes from provate method below
-      redirect_to event_path(@event) # or redirect_to @event
+      #flash[:notice] = "Event successfully updated!"
+      redirect_to @event, notice: "Event successfully saved!"
     else
       render :edit # to correct any items that failed validation
     end #if
