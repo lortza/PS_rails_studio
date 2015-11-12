@@ -6241,6 +6241,7 @@ Processing by ProjectsController#index as HTML
   Rendered layouts/_sidebar.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+<<<<<<< HEAD
   [1m[36m (1.3ms)[0m  [1mCREATE TABLE "pledges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "comment" text, "amount" decimal, "created_at" datetime, "updated_at" datetime) [0m
   [1m[35m (0.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "target_pledge_amount" decimal, "created_at" datetime, "updated_at" datetime, "website" varchar(255), "pledging_ends_on" date, "team_members" varchar(255), "image_file_name" varchar(255)) 
   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
@@ -6324,3 +6325,16 @@ Migrating to AddProjectToPledges (20151112020010)
 Migrating to AddProjectToPledges (20151112020010)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+||||||| merged common ancestors
+=======
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "pledges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "comment" text, "amount" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "target_pledge_amount" decimal, "created_at" datetime, "updated_at" datetime, "website" varchar(255), "pledging_ends_on" date, "team_members" varchar(255), "image_file_name" varchar(255)) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151112011555')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130228190011')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130228190204')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130228222855')
+>>>>>>> 0b0f620b9a72e22203412b4ceb96c56e8f2a3f10
