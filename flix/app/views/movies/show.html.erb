@@ -2,16 +2,10 @@
   <header>
     <%= image_for(@movie) %>
     <h1><%= @movie.title %></h1>
-    <h2>Released: <%= @movie.released_on %></h2>
+    <h2>Released: <%= @movie.released_on %> &bull; <span class="no-rule"><%= @movie.rating %> &bull; <%= @movie.duration %> </span></h2>
   </header>
 
-  <p>
-    <%= @movie.description %>
-  </p>
-  
-  <h3 class="no-rule">
-    <%= @movie.rating %> &bull; <%= @movie.duration %> 
-  </h3>
+  <p><%= @movie.description %></p>
   
   <h3>Cast</h3>
   <p>
@@ -27,6 +21,8 @@
   <p>
     <%= format_total_gross(@movie) %>
   </p>
+
+  <%= link_to pluralize(@movie.reviews.size, "review"), movie_reviews_path(@movie) %>
   
   <footer>
     <nav>
