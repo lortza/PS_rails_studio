@@ -1,10 +1,5 @@
 @import "colors";
 
-html {
-  box-sizing: border-box; } *,
-  *:before,*:after {
-  box-sizing: inherit; }
-
 body {
   color: $primary-text-color;
   background-image: image-url("background.jpg");
@@ -148,22 +143,9 @@ aside#sidebar {
         a:hover {
           background-color: $accent-color;
           color: #000;
-        }/* hover */
+        }
 
-      }/* li */
-    }/* ul */
-  }/* nav */
-}/* aside#sidebar */
-
-.col {
-  float: left;
-} /* .col */
-
-.col-33 {
-  width: 33%; 
-} /* .col-33 */
-.col-66 {
-  width: 66%; 
-} /* .col-55 */ 
-  
-
+      }
+    }
+  }
+}
