@@ -1,17 +1,20 @@
 <% if @project.errors.any? %>
-<section id="errors">
-  <header>
-    <h2>
-      Oops! The <%= @project.class.name.titleize.downcase %> could not be saved.
-    </h2>
-    <h3>
-      Please correct the following <%= pluralize(@project.errors.count, "error") %>:
-    </h3>
-  </header>
-  <ul>
-    <% @project.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-</section>
+  <section id="errors">
+  <div class="col col-33">
+     <%= image_tag("catfail.jpg") %>
+  </div> <!-- col -->
+  <div class="col col-66">
+  <h2>Your submission could not be saved.</h2>
+    <h3>Please correct the following <%= pluralize(@project.errors.count, "error") %>:</h3>
+    <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %><!-- messages -->
+    </ul>
+     
+  </div> <!-- col -->
+      
+    
+    
+  </section>
 <% end %>
