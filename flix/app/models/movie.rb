@@ -11,6 +11,7 @@ class Movie < ActiveRecord::Base
     } #image_file_name
   validates :rating, inclusion: { in: RATINGS }
 
+  has_many :reviews, dependent: :destroy
 
   def self.released
     where("released_on <= ?", Time.now).order("released_on desc")
