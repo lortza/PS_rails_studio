@@ -77,13 +77,33 @@ describe "A project" do
   end # accepts properly formatted image file names
 
   it "rejects improperly formatted image file names" do
-    file_names = %w[project .jpg .png .gif project.pdf project.doc]
-    file_names.each do |file_name|
-      project = Project.new(image_file_name: file_name)
-      project.valid?
-      expect(project.errors[:image_file_name].any?).to eq(true)
-    end #file_names.each do
-  end #rejects improperly formatted image file names
+      file_names = %w[project .jpg .png .gif project.pdf project.doc]
+      file_names.each do |file_name|
+        project = Project.new(image_file_name: file_name)
+        project.valid?
+        expect(project.errors[:image_file_name].any?).to eq(true)
+      end #file_names.each do
+    end #rejects improperly formatted image file names
+
+    it "has many pledges" do
+    project = Project.new(project_attributes)
+
+    pledge1 = project.pledges.new(pledge_attributes)
+    pledge2 = project.pledges.new(pledge_attributes)
+
+    expect(project.pledges).to include(pledge1)
+    expect(project.pledges).to include(pledge2)
+  end
+
+  it "deletes associated pledges" do
+    project = Project.create(project_attributes)
+
+    project.pledges.create(pledge_attributes)
+
+    expect {
+      project.destroy
+    }.to change(Pledge, :count).by(-1)
+  end
 
 
 end #describe
