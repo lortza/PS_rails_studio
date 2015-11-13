@@ -103,3 +103,36 @@ Movie.create!([
     total_gross: 387_623_910
   }
 ])
+
+Review.create!([
+  {
+    name: 'Billy',
+    city: "Atlanta, GA",
+    comment: 
+    %{
+      Wow what a great movie.
+    }.squish,
+    stars: 3, 
+    movie_id: 1
+  },
+  {
+    name: 'Jasper',
+    city: "Jackson, MS",
+    comment: 
+    %{
+      Wow what a great movie.
+    }.squish,
+    stars: 3,
+    movie_id: 1 
+  },
+  {
+    name: 'Eddie',
+    city: "Baton Rouge, LA",
+    comment: 
+    %{
+      Wow what a great movie.
+    }.squish,
+    stars: 3,
+    movie_id: 2
+  }
+  ])

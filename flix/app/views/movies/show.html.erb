@@ -22,9 +22,18 @@
     <%= format_total_gross(@movie) %>
   </p>
 
-  <%= link_to pluralize(@movie.reviews.size, "review"), movie_reviews_path(@movie) %>
+  <h2>Read <%= link_to pluralize(@movie.reviews.size, "Review"), movie_reviews_path(@movie) %></h2>
+    <ol id="reviews">
+      <% @movie.reviews.each do |review| %>
+        <%= render :partial => "reviews/review", :object => review %>
+      <% end %>
+    </ol>
+
+  <h2>Leave a Review</h2>
+  <%= render "reviews/form" %>
   
   <footer>
+  <%= link_to "Write Review", new_movie_review_path(@movie), class: "button ok review" %>
     <nav>
       <%= link_to 'Edit', edit_movie_path(@movie), class: 'button' %>
       <%= link_to 'Delete', @movie, 
