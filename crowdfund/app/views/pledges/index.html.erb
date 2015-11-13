@@ -4,3 +4,8 @@
   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
 
 <% end %>
+
+<footer>
+  <%= link_to "Make New Pledge", new_project_pledge_path(@project), class: " button ok pledge" %>
+</footer>
+   
