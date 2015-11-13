@@ -1,0 +1,6 @@
+<h1 id="content-header">Pledges for <%= link_to @project.name, @project %></h1>
+
+<% @pledges.each do |p| %>
+  <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+
+<% end %>

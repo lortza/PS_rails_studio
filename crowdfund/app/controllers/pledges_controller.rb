@@ -1,2 +1,8 @@
 class PledgesController < ApplicationController
-end
+
+  def index
+    @project = Project.find(params[:project_id])
+    @pledges = @project.pledges
+  end #index
+    
+end #PledgesController

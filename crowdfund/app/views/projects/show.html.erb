@@ -9,7 +9,8 @@
   </p>
   <h3>Target Pledge Amount</h3>
   <p>
-    <%= number_to_currency(@project.target_pledge_amount) %>
+    <%= number_to_currency(@project.target_pledge_amount) %> in 
+    <%= link_to pluralize(@project.pledges.size, "pledge"), project_pledges_path(@project) %>
   </p>
   <h3>Website</h3>
   <p>

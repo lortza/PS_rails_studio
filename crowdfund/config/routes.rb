@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :pledges
 
   root  "projects#index"
-  resources :projects
-end
+
+  resources :projects do
+    resources :pledges # nests pledges within projects
+  end #projects
+
+end #routes
