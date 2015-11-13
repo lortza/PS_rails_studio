@@ -3769,3 +3769,2593 @@ Processing by ProjectsController#show as HTML
   Rendered layouts/_sidebar.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:20:34 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `lilnk_to' for #<#<Class:0x007f88da220618>:0x007f88dbb83790>):
+    21:     <%= @project.team_members %>
+    22:   </p>
+    23:   <footer>
+    24:   <%= lilnk_to "Pledge!", new_project_pledge_path(@project) %>
+    25:     <nav>
+    26:       <%= link_to "Edit", edit_project_path(@project), class: 'button' %>
+    27:       <%= link_to "Delete", @project, 
+  app/views/projects/show.html.erb:24:in `_app_views_projects_show_html_erb__1093067431166942130_70112889277500'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.8ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:20:34 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `lilnk_to' for #<#<Class:0x007f88da220618>:0x007f88d8cfb1e8>):
+    21:     <%= @project.team_members %>
+    22:   </p>
+    23:   <footer>
+    24:   <%= lilnk_to "Pledge!", new_project_pledge_path(@project) %>
+    25:     <nav>
+    26:       <%= link_to "Edit", edit_project_path(@project), class: 'button' %>
+    27:       <%= link_to "Delete", @project, 
+  app/views/projects/show.html.erb:24:in `_app_views_projects_show_html_erb__1093067431166942130_70112864867900'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:20:44 -0600
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:21:08 -0600
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:21:42 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:21:54 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-11-13 16:22:57 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/3/pledges" for 127.0.0.1 at 2015-11-13 16:22:59 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered pledges/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2015-11-13 16:23:07 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  Rendered projects/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/6/pledges" for 127.0.0.1 at 2015-11-13 16:23:09 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"6"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  Rendered pledges/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2015-11-13 16:23:16 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  Rendered projects/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/9/edit" for 127.0.0.1 at 2015-11-13 16:23:19 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered shared/_errors.html.erb (2.7ms)
+  Rendered projects/_form.html.erb (19.8ms)
+  Rendered projects/edit.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/projects/9" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Milan Project", "description"=>"A description of a person project", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"12", "pledging_ends_on(3i)"=>"13", "target_pledge_amount"=>"300", "website"=>"http://project-c.com", "team_members"=>"Tom, Harry, Sally", "image_file_name"=>"project-c.png"}, "commit"=>"Update Project", "id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "projects" SET "name" = ?, "updated_at" = ? WHERE "projects"."id" = 9[0m  [["name", "Milan Project"], ["updated_at", "2015-11-13 22:23:30.288429"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  Rendered projects/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-13 16:23:30 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-13 16:23:50 -0600
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-13 22:23:50.057202')  ORDER BY pledging_ends_on asc[0m
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:23:50 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-13 16:23:50 -0600
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:23:52 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:23:56 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (4.9ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:27:19 -0600
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-13 16:27:27 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:27:27 -0600
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:28:17 -0600
+
+AbstractController::ActionNotFound (The action 'new' could not be found for PledgesController):
+  actionpack (4.1.9) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:28:17 -0600
+
+AbstractController::ActionNotFound (The action 'new' could not be found for PledgesController):
+  actionpack (4.1.9) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:28:20 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:28:24 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (4.7ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:31 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:29:35 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:30:10 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:30:59 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:59 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:59 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:59 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:30:59 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:31:00 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 116.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:23 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.7ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:37 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:34:40 -0600
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 113.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:38:27 -0600
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:39:05 -0600
+
+AbstractController::ActionNotFound (The action 'new' could not be found for PledgesController):
+  actionpack (4.1.9) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:39:05 -0600
+
+AbstractController::ActionNotFound (The action 'new' could not be found for PledgesController):
+  actionpack (4.1.9) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:39:27 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template pledges/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views"
+):
+  actionview (4.1.9) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.9) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.9) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.9) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.9) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.9) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.9) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.9) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.9) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.9) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.9) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.9) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.9) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.9) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.1.9) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.9) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.9) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.9) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.9) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.9) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.9) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.9) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:41:05 -0600
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/controllers/pledges_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
+  before_action: set_project
+                ^):
+  app/controllers/pledges_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.4ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:41:46 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `pledge' for #<Project:0x007f88dba92598>):
+  app/controllers/pledges_controller.rb:11:in `new'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.1ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:43:08 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 25ms
+
+ActionView::MissingTemplate (Missing template pledges/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views"
+):
+  actionview (4.1.9) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.9) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.9) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.9) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.9) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.9) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.9) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.9) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.9) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.9) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.9) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.9) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.9) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.9) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.1.9) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.9) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.9) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.9) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.9) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.9) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.9) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.9) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.9) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.9) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pledges/_form.html.erb (0.2ms)
+  Rendered pledges/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-11-13 16:45:15 -0600
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-11-13 16:47:53 -0600
+Processing by ProjectsController#new as HTML
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered projects/_form.html.erb (6.9ms)
+  Rendered projects/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Tester", "description"=>"dfkg dskg sdkjgh kjfghkjfgh kfg hkjf hjkd kjf kjd fgkjdf kjf gkhf h", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"11", "pledging_ends_on(3i)"=>"13", "target_pledge_amount"=>"45678", "website"=>"", "team_members"=>"", "image_file_name"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered shared/_errors.html.erb (3.6ms)
+  Rendered projects/_form.html.erb (10.7ms)
+  Rendered projects/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started GET "/assets/catfail.jpg" for 127.0.0.1 at 2015-11-13 16:48:06 -0600
+
+
+Started POST "/projects" for 127.0.0.1 at 2015-11-13 16:48:24 -0600
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Tester", "description"=>"dfkg dskg sdkjgh kjfghkjfgh kfg hkjf hjkd kjf kjd fgkjdf kjf gkhf h", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"11", "pledging_ends_on(3i)"=>"13", "target_pledge_amount"=>"45678", "website"=>"http://project.com", "team_members"=>"", "image_file_name"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered projects/_form.html.erb (8.0ms)
+  Rendered projects/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:24 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started GET "/assets/catfail.jpg" for 127.0.0.1 at 2015-11-13 16:48:25 -0600
+
+
+Started POST "/projects" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Tester", "description"=>"dfkg dskg sdkjgh kjfghkjfgh kfg hkjf hjkd kjf kjd fgkjdf kjf gkhf h", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"11", "pledging_ends_on(3i)"=>"13", "target_pledge_amount"=>"45678", "website"=>"http://project.com", "team_members"=>"", "image_file_name"=>"image.jpg"}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-11-13 22:48:39.556040"], ["description", "dfkg dskg sdkjgh kjfghkjfgh kfg hkjf hjkd kjf kjd fgkjdf kjf gkhf h"], ["image_file_name", "image.jpg"], ["name", "Tester"], ["pledging_ends_on", "2015-11-13"], ["target_pledge_amount", 45678.0], ["team_members", ""], ["updated_at", "2015-11-13 22:48:39.556040"], ["website", "http://project.com"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/10
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/10" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 10]]
+  Rendered projects/show.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+
+Started GET "/images/image.jpg" for 127.0.0.1 at 2015-11-13 16:48:39 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/image.jpg"):
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.4ms)
+
+
+Started DELETE "/projects/10" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "id"=>"10"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPledge Load (0.2ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 10]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-13 22:48:54.673612')  ORDER BY pledging_ends_on asc[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-13 16:48:54 -0600
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-13 22:52:57.700580')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2015-11-13 16:52:57 -0600
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-11-13 16:53:01 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  Rendered projects/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 16:53:03 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_form.html.erb (0.8ms)
+  Rendered pledges/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112865556680'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.8ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 16:53:03 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_form.html.erb (0.7ms)
+  Rendered pledges/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.7ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 16:55:26 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_form.html.erb (0.8ms)
+  Rendered pledges/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.7ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 16:56:15 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_form.html.erb (0.7ms)
+  Rendered pledges/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.1ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:01:20 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_form.html.erb (1.1ms)
+  Rendered pledges/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.9ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:01:36 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_form.html.erb (2.2ms)
+  Rendered pledges/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Missing block):
+    1: <%= form_for([@project, @pledge])%>
+    2:   <%= render "shared/errors", object: @pledge %>
+    3: 
+    4:   <fieldset>
+  app/views/pledges/_form.html.erb:1:in `_app_views_pledges__form_html_erb__702026061674015494_70112865080040'
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.8ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:02:00 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_form.html.erb (0.7ms)
+  Rendered pledges/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.4ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:02:36 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_form.html.erb (0.4ms)
+  Rendered pledges/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/localflavor/Desktop/TTS/PragmaticStudio/rails_studio/crowdfund/app/views/pledges/_form.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pledges/_form.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/pledges/new.html.erb:5:in `_app_views_pledges_new_html_erb___4070202693510967871_70112908741980'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.1ms)
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/_form.html.erb (17.8ms)
+  Rendered pledges/new.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 138.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:03:46 -0600
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/_form.html.erb (14.9ms)
+  Rendered pledges/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:07 -0600
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered pledges/_form.html.erb (4.5ms)
+  Rendered pledges/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:22 -0600
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/_form.html.erb (5.4ms)
+  Rendered pledges/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:29 -0600
+
+
+Started GET "/projects/3/pledges/new" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered pledges/_form.html.erb (5.8ms)
+  Rendered pledges/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:04:56 -0600
+
+
+Started POST "/projects/3/pledges" for 127.0.0.1 at 2015-11-13 17:05:37 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PledgesController):
+  actionpack (4.1.9) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.9) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.9) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.9) lib/action_dispatch/routing/route_set.rb:685:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.9) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started POST "/projects/3/pledges" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "pledge"=>{"name"=>"Da PC", "city"=>"NOLA, LA", "amount"=>"25.0", "comment"=>"Well, I had been just sitting on this chair all day. I didn't have anything better to do."}, "commit"=>"Submit", "project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_errors.html.erb (2.1ms)
+  Rendered pledges/_form.html.erb (10.7ms)
+  Rendered pledges/new.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 76.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/catfail.jpg" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:25 -0600
+
+
+Started POST "/projects/3/pledges" for 127.0.0.1 at 2015-11-13 17:10:41 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "pledge"=>{"name"=>"Da PC", "city"=>"NOLA, LA", "email"=>"eetchy@aol.com", "amount"=>"25.0", "comment"=>"Well, I had been just sitting on this chair all day. I didn't have anything better to do."}, "commit"=>"Submit", "project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "pledges" ("amount", "city", "comment", "created_at", "email", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 25.0], ["city", "NOLA, LA"], ["comment", "Well, I had been just sitting on this chair all day. I didn't have anything better to do."], ["created_at", "2015-11-13 23:10:42.003148"], ["email", "eetchy@aol.com"], ["name", "Da PC"], ["project_id", 3], ["updated_at", "2015-11-13 23:10:42.003148"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/3/pledges
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/3/pledges" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPledge Load (0.2ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  Rendered pledges/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:10:42 -0600
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-11-13 17:10:56 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  Rendered projects/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-13 17:10:56 -0600
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-11-13 17:10:59 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered projects/_form.html.erb (7.4ms)
+  Rendered projects/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "project"=>{"name"=>"Bonfire Project", "description"=>"A description of a project involving bonfires and marshmallows. ", "pledging_ends_on(1i)"=>"2015", "pledging_ends_on(2i)"=>"12", "pledging_ends_on(3i)"=>"12", "target_pledge_amount"=>"300", "website"=>"http://project-c.com", "team_members"=>"Tom, Harry, Sally", "image_file_name"=>"project-c.png"}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "projects" SET "description" = ?, "name" = ?, "updated_at" = ? WHERE "projects"."id" = 3  [["description", "A description of a project involving bonfires and marshmallows. "], ["name", "Bonfire Project"], ["updated_at", "2015-11-13 23:11:19.393434"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/pledges.js?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2015-11-13 17:11:19 -0600
+
+
+Started GET "/projects/3/pledges" for 127.0.0.1 at 2015-11-13 17:11:28 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered pledges/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.2ms)
