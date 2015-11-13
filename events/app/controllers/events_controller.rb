@@ -1,14 +1,15 @@
 class EventsController < ApplicationController
+
+  # before_action :set_event
+
   def index
     @time = Time.now
     @events = Event.upcoming # upcoming method is in the Model
     #@events = Event.limit(1)
-    #@events = ["Kitty Watch", "Porch Swinging", "Back-Porch Sittin", "Big Night Out"] 
   end #index
 
   def show
     @event = Event.find(params[:id])
-
   end #show
 
   def edit
@@ -39,7 +40,7 @@ class EventsController < ApplicationController
   end #create
 
   def destroy
-    @event = Event.find(params[:id]) 
+    # @event = Event.find(params[:id]) 
     @event.destroy
     redirect_to events_url
   end #destroy
@@ -51,7 +52,10 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity)
     end #event_params
-    
-    
+
+    def set_event
+       @event = Event.find(params[:id])
+    end #set_event
+       
     
 end #EventsController

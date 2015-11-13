@@ -9,7 +9,11 @@
       <span class="date">
         <%= time_ago_in_words(r.created_at) %> ago
       </span>
-      (<%= r.how_heard %>)    
+      (<%= r.how_heard %>) 
     </li>
   <% end %>
 </ol>
+
+<footer>
+  <%= link_to "Register Another Person", new_event_registration_path(@event), class: "button ok register" %>
+</footer>

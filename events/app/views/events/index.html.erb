@@ -24,6 +24,7 @@
             <td><%= format_price(event) %></td>
           </tr>
         </table>
+        <%= link_to 'Edit', edit_event_path(event), class: 'button' %>
       </article>
     </li>
   <% end %>
