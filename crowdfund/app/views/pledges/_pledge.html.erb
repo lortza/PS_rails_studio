@@ -2,9 +2,9 @@
        buttons
       </div>
       <li>
-          <span class="amount"><%= pluralize(pledge.amount, 'amount') %></span>
+          <span class="amount"><%= number_to_currency(pledge.amount) %></span>
           <span class="user">by <%= pledge.name %></span>
-          <span class="date"><%= pledge.created_at %></span>
+          <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
           <p>
             &quot;<%= pledge.comment %>&quot;
           </p>

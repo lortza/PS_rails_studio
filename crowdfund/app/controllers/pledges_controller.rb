@@ -20,6 +20,11 @@ class PledgesController < ApplicationController
     end #if
   end #create
 
+  def show
+     
+  end #show
+    
+
 
 
     # def sum_pledges(pledges)
