@@ -10,16 +10,18 @@ article#project {
     } /* h1 */
       
     h2 {
-      margin-top: 0px;
+      margin-top: 0em;
       font-weight: normal;
       font-style: italic; 
      } /* h2 */  
+       
   } /* header */
     
   p {
     padding:  0;
     font-size: 1.15em;
     line-height: 1.25em;
+    margin: 0px;
   }
 
   h2 {
@@ -30,7 +32,7 @@ article#project {
 
   h3 {
     // padding-bottom: .5em;
-    margin: 1.5em 0 0 0;
+    margin: 2em 0 0 0;
     font-size: 120%;
     border-bottom: 1px solid $subdued-color;
 
@@ -185,12 +187,23 @@ ol#pledges {
   list-style: none;
   padding: 0;
 
+  .pledge-buttons {
+    float: right;
+    font-size: .6em; 
+    margin-right: .6em;
+  } /* .pledge-buttons */
+
   li {
-    margin: 1em 0;
+    margin: 0em 0em 1.5em 0em;
+    background-color: $tertiary-background-color;
+    padding: .5em;
 
     span {
       &.amount {
         font-weight: bold;
+      }
+      &.user {
+        font-weight: normal;
       }
       &.date {
         font-size: .9em;
@@ -201,6 +214,7 @@ ol#pledges {
 
     p {
       font-size: .95em;
+      margin: 0px;
     }
   }
 }

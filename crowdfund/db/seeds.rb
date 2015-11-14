@@ -57,7 +57,7 @@ Pledge.create([
    name: "Da PC",
    city: "NOLA", 
    email: "blank@email.com",
-   amount: 300,
+   amount: 200,
    comment: "Normally I'd just sit on the chair, but this seems like a better solution.",
    project_id: 2
  },

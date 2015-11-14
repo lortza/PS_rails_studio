@@ -1,9 +1,17 @@
 <h1 id="content-header">Pledges for <%= link_to @project.name, @project %></h1>
 
+<% @total_pledged = 0 %>
+<% @pledges.each do |p| %>
+  <% @total_pledged += p.amount %>
+<% end %>
+<p><strong>Total Requested:</strong> <%= number_to_currency(@project.target_pledge_amount) %></p>
+
+<p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
 <% @pledges.each do |p| %>
   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
-
 <% end %>
+
+
 
 <footer>
   <%= link_to "Make New Pledge", new_project_pledge_path(@project), class: " button ok pledge" %>

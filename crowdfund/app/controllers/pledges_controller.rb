@@ -19,6 +19,17 @@ class PledgesController < ApplicationController
       render :new
     end #if
   end #create
+
+
+
+    # def sum_pledges(pledges)
+  #   @total_pledged = 0
+  #   pledges.each do |p|
+  #     @total_pledged += p.amount
+  #   end #each
+  #   number_to_currency(@total_pledged)
+  # end #sum_pledges
+    
     
 
 private

@@ -1,0 +1,11 @@
+      <div class="pledge-buttons">
+       buttons
+      </div>
+      <li>
+          <span class="amount"><%= pluralize(pledge.amount, 'amount') %></span>
+          <span class="user">by <%= pledge.name %></span>
+          <span class="date"><%= pledge.created_at %></span>
+          <p>
+            &quot;<%= pledge.comment %>&quot;
+          </p>
+      </li>

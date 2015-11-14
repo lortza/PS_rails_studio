@@ -7,10 +7,16 @@
   <p>
     <%= @project.description %>
   </p>
-  <h3>Target Pledge Amount</h3>
+  <h3>Budget</h3>
   <p>
-    <%= number_to_currency(@project.target_pledge_amount) %> in 
-    <%= link_to pluralize(@project.pledges.size, "pledge"), project_pledges_path(@project) %>
+    <p><strong>Goal: </strong> <%= number_to_currency(@project.target_pledge_amount) %> </p>
+
+    <% @total_pledged = 0 %>
+    <% @project.pledges.each do |p| %>
+      <% @total_pledged += p.amount %>
+    <% end %>
+
+<p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
   </p>
   <h3>Website</h3>
   <p>
@@ -20,6 +26,15 @@
   <p>
     <%= @project.team_members %>
   </p>
+
+  <h3><%= pluralize(@project.pledges.size, "Pledge") %> <span style="font-weight: normal;"><%= link_to "See All Pledges", project_pledges_path(@project) %></span></h3>
+
+  <ol id="pledges">
+      <% @project.pledges.each do |pledge| %>
+        <%= render :partial => "pledges/pledge", :object => pledge %>
+      <% end %>
+    </ol>
+
   <footer>
   <%= link_to "Pledge!", new_project_pledge_path(@project), class: "button ok pledge" %>
     <nav>

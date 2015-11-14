@@ -6397,3 +6397,912 @@ Processing by ProjectsController#show as HTML
   Rendered layouts/_sidebar.html.erb (0.5ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-14 10:21:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.9ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-14 16:21:14.802320')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (67.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (1.1ms)
+  Rendered layouts/_sidebar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 429ms (Views: 382.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 10:21:17 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (45.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 201ms (Views: 194.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-14 10:21:19 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_errors.html.erb (6.4ms)
+  Rendered pledges/_form.html.erb (58.7ms)
+  Rendered pledges/new.html.erb within layouts/application (64.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 235ms (Views: 213.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:22:55 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.5ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 59.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-14 10:23:04 -0600
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-14 16:23:04.183561')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2015-11-14 10:23:06 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  Rendered projects/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/6/pledges" for 127.0.0.1 at 2015-11-14 10:23:08 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"6"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  Rendered pledges/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+  [1m[36mPledge Load (1.3ms)[0m  [1mSELECT "pledges".* FROM "pledges"[0m
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 10:31:39 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 77ms (Views: 66.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-14 10:31:40 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/_form.html.erb (6.9ms)
+  Rendered pledges/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.1ms)
+  [1m[35mPledge Load (0.2ms)[0m  SELECT "pledges".* FROM "pledges"
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-14 10:39:50 -0600
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-11-14 16:39:50.122472')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 10:40:26 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-14 10:40:41 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/_form.html.erb (7.3ms)
+  Rendered pledges/new.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:41:24 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "pledge"=>{"name"=>"Nancy", "city"=>"Johannesburg", "email"=>"nancy@email.com", "amount"=>"500.0", "comment"=>"Hey this is super. Can't wait to see it happen."}, "commit"=>"Submit", "project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "pledges" ("amount", "city", "comment", "created_at", "email", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["amount", 500.0], ["city", "Johannesburg"], ["comment", "Hey this is super. Can't wait to see it happen."], ["created_at", "2015-11-14 16:41:24.251262"], ["email", "nancy@email.com"], ["name", "Nancy"], ["project_id", 2], ["updated_at", "2015-11-14 16:41:24.251262"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/2/pledges
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:41:24 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `<' for []:Array):
+     7: <% @all_amounts = [] %>
+     8: <% @sum = 0 %>
+     9: <% @pledges.each do |p| %>
+    10:   <% @all_amounts < p.amount %>
+    11:   <% @all_amounts.inject{|a| @sum += a} %>
+    12:   <p><%= @sum %></p>
+    13: <% end %>
+  app/views/pledges/index.html.erb:10:in `block in _app_views_pledges_index_html_erb__2203409042228235104_70208643264720'
+  app/views/pledges/index.html.erb:9:in `_app_views_pledges_index_html_erb__2203409042228235104_70208643264720'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+
+
+Started POST "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:41:41 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "pledge"=>{"name"=>"Nancy", "city"=>"Johannesburg", "email"=>"nancy@email.com", "amount"=>"500.0", "comment"=>"Hey this is super. Can't wait to see it happen."}, "commit"=>"Submit", "project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pledges" ("amount", "city", "comment", "created_at", "email", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["amount", 500.0], ["city", "Johannesburg"], ["comment", "Hey this is super. Can't wait to see it happen."], ["created_at", "2015-11-14 16:41:41.258828"], ["email", "nancy@email.com"], ["name", "Nancy"], ["project_id", 2], ["updated_at", "2015-11-14 16:41:41.258828"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/2/pledges
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:41:41 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:41:52 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `<' for []:Array):
+     7: <% @all_amounts = [] %>
+     8: <% @sum = 0 %>
+     9: <% @pledges.each do |p| %>
+    10:   <% @all_amounts < p.amount %>
+    11:   <% @all_amounts.inject{|a| @sum += a} %>
+    12:   <p><%= @sum %></p>
+    13: <% end %>
+  app/views/pledges/index.html.erb:10:in `block in _app_views_pledges_index_html_erb__2203409042228235104_70208643183500'
+  app/views/pledges/index.html.erb:9:in `_app_views_pledges_index_html_erb__2203409042228235104_70208643183500'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:43:15 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:44:57 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (no implicit conversion of BigDecimal into Array):
+     7: <% @all_amounts = [] %>
+     8: <% @sum = 0 %>
+     9: <% @pledges.each do |p| %>
+    10:   <% @all_amounts += p.amount %>
+    11:   <p><%= @all_amounts %></p>
+    12: <% end %>
+    13: 
+  app/views/pledges/index.html.erb:10:in `block in _app_views_pledges_index_html_erb__2203409042228235104_70208643164840'
+  app/views/pledges/index.html.erb:9:in `_app_views_pledges_index_html_erb__2203409042228235104_70208643164840'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.8ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:45:18 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (no implicit conversion of Complex into Array):
+     7: <% @all_amounts = [] %>
+     8: <% @sum = 0 %>
+     9: <% @pledges.each do |p| %>
+    10:   <% @all_amounts += p.amount.i %>
+    11:   <p><%= @all_amounts %></p>
+    12: <% end %>
+    13: 
+  app/views/pledges/index.html.erb:10:in `block in _app_views_pledges_index_html_erb__2203409042228235104_70208641463700'
+  app/views/pledges/index.html.erb:9:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641463700'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.7ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:45:29 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:45:53 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `last' for #<BigDecimal:7fb572454988,'0.1E3',9(18)>):
+     8: <% @sum = 0 %>
+     9: <% @pledges.each do |p| %>
+    10:   <% @all_amounts += p.amount %>
+    11:   <p><%= @all_amounts.last %></p>
+    12: <% end %>
+    13: 
+    14: <footer>
+  app/views/pledges/index.html.erb:11:in `block in _app_views_pledges_index_html_erb__2203409042228235104_70208641629500'
+  app/views/pledges/index.html.erb:9:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641629500'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:46:46 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `last' for #<BigDecimal:7fb572906918,'0.11E4',9(18)>):
+     9: <% @pledges.each do |p| %>
+    10:   <% @all_amounts += p.amount %>
+    11:   <% end %>
+    12:   <p><%= @all_amounts.last %></p>
+    13: 
+    14: <footer>
+    15:   <%= link_to "Make New Pledge", new_project_pledge_path(@project), class: " button ok pledge" %>
+  app/views/pledges/index.html.erb:12:in `_app_views_pledges_index_html_erb__2203409042228235104_70208653042080'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:46:52 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:47:48 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:49:03 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:56:05 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb572405108>:0x007fb5723ff848>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:57:18 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (22.4ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb579822590>:0x007fb579821078>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.9ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:57:26 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb579822590>:0x007fb573e401a8>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.6ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:58:55 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.3ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb572042728>:0x007fb5720399c0>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.4ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:59:05 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb573e99168>:0x007fb573e98128>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.1ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 10:59:58 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb57203adc0>:0x007fb579aab938>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 11:02:38 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `sum_pledges' for #<#<Class:0x007fb573e73378>:0x007fb573e72838>):
+     5:   <% @total_pledged += p.amount %>
+     6: <% end %>
+     7: <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+     8: <p><%= sum_pledges(@pledges) %></p>
+     9: 
+    10: <% @pledges.each do |p| %>
+    11:   <p><%= p.name %> (<%= p.city %>), <%= number_to_currency(p.amount) %>, <%= p.comment %></p>
+  app/views/pledges/index.html.erb:8:in `_app_views_pledges_index_html_erb__2203409042228235104_70208641296320'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 11:03:56 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 79ms (Views: 63.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 11:04:46 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges/new" for 127.0.0.1 at 2015-11-14 11:08:51 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered pledges/_form.html.erb (5.9ms)
+  Rendered pledges/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 67.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 11:08:55 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yb4Cjr6wWxO/+e+FUGMrYPLlGWZ2+M0IgjsXKbfuCAA=", "pledge"=>{"name"=>"", "city"=>"", "email"=>"", "comment"=>""}, "commit"=>"Submit", "project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (5.2ms)
+  Rendered pledges/_form.html.erb (11.9ms)
+  Rendered pledges/new.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 76ms (Views: 71.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 11:09:02 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 75.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/2/pledges" for 127.0.0.1 at 2015-11-14 11:09:03 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered pledges/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:09:35 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:11:16 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:     <%= number_to_currency(@project.target_pledge_amount) %> 
+    13: 
+    14:     <% @total_pledged = 0 %>
+    15: <% @pledges.each do |p| %>
+    16:   <% @total_pledged += p.amount %>
+    17: <% end %>
+    18: 
+  app/views/projects/show.html.erb:15:in `_app_views_projects_show_html_erb__8656497258436355_70208640773900'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.6ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:11:43 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:13:02 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:15:54 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.6ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered projects/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:17:36 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.2ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 154.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:18:50 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.6ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 126ms (Views: 124.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:20:57 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 177ms (Views: 175.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:22:08 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:22:39 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered projects/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:23:04 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 112.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:24:13 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered projects/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 103.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:24:34 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered projects/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 106ms (Views: 104.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:25:21 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:25:34 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 108.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:26:08 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered projects/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 119.7ms | ActiveRecord: 0.2ms)
