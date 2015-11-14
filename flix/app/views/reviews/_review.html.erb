@@ -4,7 +4,7 @@
       <li>
           <span class="review"><%= pluralize(review.stars, 'star') %></span>
           <span class="user">by <%= review.name %></span>
-          <span class="date"><%= review.created_at %></span>
+          <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
           <p>
             &quot;<%= review.comment %>&quot;
           </p>
