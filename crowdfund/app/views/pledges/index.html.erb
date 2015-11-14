@@ -10,7 +10,7 @@
 <p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
 <article id="project" class="project">
   <ol id="pledges">
-    <% @pledges.each do |pledge| %>
+    <% @pledges.order("created_at DESC").each do |pledge| %>
       <%= render :partial => "pledges/pledge", :object => pledge %>
     <% end %>
   </ol>

@@ -32,7 +32,7 @@
   <h3><%= pluralize(@project.pledges.size, "Pledge") %> <span style="font-weight: normal;"><%= link_to "See All Pledges", project_pledges_path(@project) %></span></h3>
 
     <ol id="pledges">
-      <% @project.pledges.take(3).each do |pledge| %>
+      <% @project.pledges.order("created_at DESC").take(3).each do |pledge| %>
         <%= render :partial => "pledges/pledge", :object => pledge %>
       <% end %>
     </ol>
