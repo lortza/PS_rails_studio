@@ -7306,3 +7306,51 @@ Processing by ProjectsController#show as HTML
   Rendered layouts/_sidebar.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 122ms (Views: 119.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:27:21 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.3ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:27:33 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-11-14 11:27:48 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.2ms)
+  Rendered pledges/_pledge.html.erb (0.1ms)
+  Rendered projects/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.2ms)

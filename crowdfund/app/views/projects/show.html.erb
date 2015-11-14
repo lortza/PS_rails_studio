@@ -3,10 +3,12 @@
     <%= image_for(@project) %>
     <h1><%= @project.name %></h1>
     <h2><%= format_pledging_ends_on(@project) %></h2>
+    <%= link_to "Pledge!", new_project_pledge_path(@project), class: "button ok pledge" %>
   </header>
   <p>
     <%= @project.description %>
   </p>
+  
   <h3>Budget</h3>
   <p>
     <p><strong>Goal: </strong> <%= number_to_currency(@project.target_pledge_amount) %> </p>
@@ -36,7 +38,7 @@
     </ol>
 
   <footer>
-  <%= link_to "Pledge!", new_project_pledge_path(@project), class: "button ok pledge" %>
+  
     <nav>
       <%= link_to "Edit", edit_project_path(@project), class: 'button' %>
       <%= link_to "Delete", @project, 
