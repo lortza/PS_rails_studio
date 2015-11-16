@@ -19,6 +19,14 @@ class Event < ActiveRecord::Base
   def self.upcoming
     where("starts_at >= ?", Time.now).order("starts_at")
   end #self.upcoming
+
+  def spots_left
+    capacity - registrations.size 
+  end #spots_left
+
+  def sold_out?
+    spots_left.zero?
+  end #sold_out?
     
 end #Event
 
