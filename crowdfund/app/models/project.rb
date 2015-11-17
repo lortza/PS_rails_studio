@@ -26,6 +26,19 @@ class Project < ActiveRecord::Base
     pledging_ends_on < Date.today
   end
 
+  def total_pledged
+    pledges.sum(:amount) 
+  end #total_pledged
+    
+
+  # def sum_numbers(pledges)
+  #   @total_pledged = 0
+  #   pledges.each do |p|
+  #     @total_pledged += p.amount
+  #   end #each
+  #   number_to_currency(@total_pledged)
+  # end #sum_pledges
+    
 
 
 

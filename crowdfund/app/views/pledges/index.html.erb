@@ -1,13 +1,8 @@
 <h1 id="content-header"><%= pluralize(@project.pledges.size, "Pledge") %> for <%= link_to @project.name, @project %></h1>
 
-
-<% @total_pledged = 0 %>
-<% @pledges.each do |p| %>
-  <% @total_pledged += p.amount %>
-<% end %>
 <p><strong>Total Requested:</strong> <%= number_to_currency(@project.target_pledge_amount) %></p>
 
-<p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
+<p><strong>Total Pledged:</strong> <%= number_to_currency(@project.total_pledged) %></p>
 <article id="project" class="project">
   <ol id="pledges">
     <% @pledges.order("created_at DESC").each do |pledge| %>

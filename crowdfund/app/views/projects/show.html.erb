@@ -10,16 +10,8 @@
   </p>
 
   <h3>Budget</h3>
-  <p>
-    <p><strong>Goal: </strong> <%= number_to_currency(@project.target_pledge_amount) %> </p>
-<!-- TODO: move this to the model -->
-    <% @total_pledged = 0 %>
-    <% @project.pledges.each do |p| %>
-      <% @total_pledged += p.amount %>
-    <% end %>
-
-<p><strong>Total Pledged:</strong> <%= number_to_currency(@total_pledged) %></p>
-  </p>
+  <p><strong>Goal: </strong> <%= number_to_currency(@project.target_pledge_amount) %> </p>
+  <p><strong>Total Pledged:</strong> <%= @project.total_pledged %> </p>
   <h3>Website</h3>
   <p>
     <%= @project.website %>
