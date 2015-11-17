@@ -42,6 +42,12 @@ article#movie {
     border: 3px solid $subdued-color;
   }
 
+  .stars-img {
+    float: left;
+    margin: 0;
+    border: 0;
+  }
+
   ul.review-stats {
     font-size: 1.15em;
   }
@@ -96,6 +102,12 @@ ul#movies {
       margin: 1em 0 0 1em;
       line-height: 1.5em;
       font-size: 1.1em;
+
+      .stars-img {
+        float: left;
+        margin: 0;
+        border: 0;
+      }
 
       th {
         width: 35%;

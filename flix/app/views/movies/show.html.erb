@@ -2,7 +2,8 @@
   <header>
     <%= image_for(@movie) %>
     <h1><%= @movie.title %></h1>
-    <h2>Released: <%= @movie.released_on %> &bull; <span class="no-rule"><%= @movie.rating %> &bull; <%= @movie.duration %> </span></h2>
+    <%= format_average_stars(@movie) %>
+    <h2>Released: <%= @movie.released_on %> &bull; <span class="no-rule"><%= @movie.rating %> &bull; <%= @movie.duration %> &bull; <%= pluralize(number_with_precision(@movie.average_stars, precision: 2), "star") %></span></h2>
   </header>
 
   <p><%= @movie.description %></p>
@@ -24,7 +25,7 @@
 
   <h2>Read <%= link_to pluralize(@movie.reviews.size, "Review"), movie_reviews_path(@movie) %></h2>
     <ol id="reviews">
-      <% @movie.reviews.each do |review| %>
+      <% @movie.reviews.order("created_at DESC").take(3).each do |review| %>
         <%= render :partial => "reviews/review", :object => review %>
       <% end %>
     </ol>
