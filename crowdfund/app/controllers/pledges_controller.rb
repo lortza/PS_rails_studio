@@ -2,8 +2,7 @@ class PledgesController < ApplicationController
 
   before_action :set_project
 
-  def index
-    # @project = Project.find(params[:project_id])
+  def index #shows all of the pledges in a project
     @pledges = @project.pledges
   end #index
 
@@ -11,7 +10,7 @@ class PledgesController < ApplicationController
      @pledge = @project.pledges.new
   end #new
 
-  def create
+  def create #saves the new pledge to the db
     @pledge = @project.pledges.new(pledge_params)
     if @pledge.save # this imploes true
       redirect_to project_pledges_path(@project), notice: "Thanks for supporting #{@project.name}!"
@@ -21,7 +20,7 @@ class PledgesController < ApplicationController
   end #create
 
   def show # working on this one
-    @project = Project.find(params[:id])
+    #@project = Project.find(params[:id])
     @pledge = @project.pledges.find(params[:id]) 
   end #show
 
