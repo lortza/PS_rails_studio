@@ -11,7 +11,8 @@
 
   <h3>Budget</h3>
   <p><strong>Goal: </strong> <%= number_to_currency(@project.target_pledge_amount) %> </p>
-  <p><strong>Total Pledged:</strong> <%= @project.total_pledged %> </p>
+  <p><strong>Total Pledged:</strong> <%= number_to_currency(@project.total_pledged) %> </p>
+  <p><%= format_funding_status(@project) %></p>
   <h3>Website</h3>
   <p>
     <%= @project.website %>

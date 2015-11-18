@@ -29,18 +29,40 @@ class Project < ActiveRecord::Base
   def total_pledged
     pledges.sum(:amount) 
   end #total_pledged
+
+  def met_goal?
+      total_pledged >= target_pledge_amount
+  end #met_goal?
+
+  def balance_needed
+    target_pledge_amount - total_pledged
+  end #balance_needed
     
-
-  # def sum_numbers(pledges)
-  #   @total_pledged = 0
-  #   pledges.each do |p|
-  #     @total_pledged += p.amount
-  #   end #each
-  #   number_to_currency(@total_pledged)
-  # end #sum_pledges
-    
-
-
-
 
 end #Project
+
+
+# create_table "pledges", force: true do |t|
+#     t.string   "name"
+#     t.string   "email"
+#     t.text     "comment"
+#     t.decimal  "amount"
+#     t.integer  "project_id"
+#     t.datetime "created_at"
+#     t.datetime "updated_at"
+#     t.string   "city"
+#   end
+
+#   add_index "pledges", ["project_id"], name: "index_pledges_on_project_id"
+
+#   create_table "projects", force: true do |t|
+#     t.string   "name"
+#     t.text     "description"
+#     t.decimal  "target_pledge_amount"
+#     t.datetime "created_at"
+#     t.datetime "updated_at"
+#     t.string   "website"
+#     t.date     "pledging_ends_on"
+#     t.string   "team_members"
+#     t.string   "image_file_name"
+#   end
