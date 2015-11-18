@@ -1,5 +1,8 @@
       <div class="pledge-buttons">
-       buttons
+        <%= link_to "Edit", edit_project_pledge_path(@project, pledge), class: 'button' %>
+        <%= link_to "Delete", [@project, pledge], 
+                  class: 'button', 
+                  method: :delete, data: { confirm: "Are you sure you want to delete " + pledge.name + "'s pledge? This action cannot be undone." } %>
       </div>
       <li>
           <span class="amount"><%= number_to_currency(pledge.amount) %></span>
