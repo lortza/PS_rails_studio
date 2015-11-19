@@ -1,5 +1,7 @@
       <div class="review-buttons">
-       buttons
+       <%= link_to 'Edit', edit_movie_review_path(@movie, review) %> | 
+       <%= link_to "Show", movie_review_path(@movie, review) %> | 
+       <%= link_to 'Delete', [@movie, review], method: :delete, data: { confirm: 'Are you sure you want to delete ' + review.name + "'s review? This action cannot be undone." } %>
       </div>
       <li>
           <span class="review"><%= pluralize(review.stars, 'star') %></span>

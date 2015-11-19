@@ -1,0 +1,19 @@
+<header id="content-header">
+  <h1><%= @review.name %>'s Review for <%= link_to @movie.title, @movie %></h1>
+</header>
+
+<h3>Name</h3>
+<p><%= @review.name %></p>
+
+<h3>City</h3>
+<p><%= @review.city %></p>
+
+<h3>Star Rating</h3>
+<p><%= @review.stars %></p>
+
+<h3>Comment</h3>
+<p><%= @review.comment %></p>
+
+<%= link_to "Edit", edit_movie_review_path, class: "button" %>  
+<%= link_to 'Delete', [@movie, @review], class: "button", method: :delete, data: { confirm: 'Are you sure you want to delete ' + @review.name + "'s review? This action cannot be undone." } %>
+

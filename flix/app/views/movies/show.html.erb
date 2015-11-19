@@ -3,7 +3,7 @@
     <%= image_for(@movie) %>
     <h1><%= @movie.title %></h1>
     <%= format_average_stars(@movie) %>
-    <h2>Released: <%= @movie.released_on %> &bull; <span class="no-rule"><%= @movie.rating %> &bull; <%= @movie.duration %> &bull; <%= pluralize(number_with_precision(@movie.average_stars, precision: 2), "star") %></span></h2>
+    <h2>Released: <%= @movie.released_on %> &bull; <span class="no-rule"><%= @movie.rating %> &bull; <%= @movie.duration %> min &bull; <%= pluralize(number_with_precision(@movie.average_stars, precision: 2), "star") %></span></h2>
   </header>
 
   <p><%= @movie.description %></p>
