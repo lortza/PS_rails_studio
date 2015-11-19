@@ -19,7 +19,7 @@ class PledgesController < ApplicationController
     end #if
   end #create
 
-  def show # working on this one
+  def show 
     #@project = Project.find(params[:id])
     @pledge = @project.pledges.find(params[:id]) 
   end #show
@@ -38,9 +38,9 @@ class PledgesController < ApplicationController
   end #update
 
   def destroy 
-    @pledge = Pledge.find(params[:id])
+    @pledge = @project.pledges.find(params[:id])
     @pledge.destroy 
-    redirect_to project_pledges_url, alert: "#{@project.name} has been deleted"
+    redirect_to project_pledges_url, alert: "#{@pledge.name}'s pledge has been deleted"
   end #destroy      
 
 private
