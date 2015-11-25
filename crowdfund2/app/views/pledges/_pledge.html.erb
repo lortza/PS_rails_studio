@@ -1,0 +1,14 @@
+      <div class="pledge-buttons">
+        <%= link_to "Edit", edit_project_pledge_path(@project, pledge) %> | 
+        <%= link_to "Show", project_pledge_path(@project, pledge) %> | 
+        <%= link_to "Delete", [@project, pledge], 
+                  method: :delete, data: { confirm: "Are you sure you want to delete " + pledge.name + "'s pledge? This action cannot be undone." } %>
+      </div>
+      <li>
+          <span class="amount"><%= number_to_currency(pledge.amount) %></span>
+          <span class="user">by <%= pledge.name %></span>
+          <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
+          <p>
+            &quot;<%= pledge.comment %>&quot;
+          </p>
+      </li>
