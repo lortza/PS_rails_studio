@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_secure_password #this adds presence validation
+  has_secure_password #this adds presence validation, confirmation validation
 
   validates :name, presence: true
   validates :email, presence: true,
