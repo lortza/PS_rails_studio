@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112200855) do
+ActiveRecord::Schema.define(version: 20151125031213) do
 
   create_table "pledges", force: true do |t|
     t.string   "name"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20151112200855) do
     t.date     "pledging_ends_on"
     t.string   "team_members"
     t.string   "image_file_name"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
