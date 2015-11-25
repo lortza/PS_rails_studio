@@ -22,6 +22,6 @@ module Flix
     
     config.generators do |g|
       g.test_framework false
-    end
-  end
-end
+    end #do
+  end #Application
+end #Flix
