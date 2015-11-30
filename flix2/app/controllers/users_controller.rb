@@ -23,6 +23,27 @@ class UsersController < ApplicationController
       render :new
     end 
   end #create
+
+  def edit
+     #@user = User.find(params[:id])
+  end #edit
+
+  def update
+    if @user.update(user_params)
+      redirect_to @user, notice: "#{@user.name}'s account has been successfully updated."
+     else
+       render :edit
+     end 
+  end #update
+
+  def destroy
+    @user.destroy
+    @user.destroy
+    redirect_to root_url, alert: "#{@user.name}'s Account successfully deleted!"
+  end #destroy
+    
+    
+    
     
     
 private
