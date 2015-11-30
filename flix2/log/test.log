@@ -653,3 +653,49 @@ Binary data inserted for `string` type on column `password_digest`
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('larry@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-11-30 00:48:14.481548"], ["email", "larry@example.com"], ["name", "Larry"], ["password_digest", "$2a$04$HXI.KluhyRFuHnCoy05/W.mPcM2K8MsBilz1s46gL48bJxHMAe7hS"], ["updated_at", "2015-11-30 00:48:14.481548"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('moe@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-11-30 00:48:14.489926"], ["email", "moe@example.com"], ["name", "Moe"], ["password_digest", "$2a$04$5kTiLSykdNhvq.4Pv6ubfO5hfEhohmkzVOk/BhdoTttZ9gMxcYpPu"], ["updated_at", "2015-11-30 00:48:14.489926"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('curly@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-11-30 00:48:14.493211"], ["email", "curly@example.com"], ["name", "Curly"], ["password_digest", "$2a$04$RHBvp/wLe4f721tjpKepUO0QHGBfbaz6d0Jrr/ZKyPO/3ILLAyFQi"], ["updated_at", "2015-11-30 00:48:14.493211"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users" for 127.0.0.1 at 2015-11-29 18:48:14 -0600
+Processing by UsersController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 440ms (Views: 432.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-11-30 00:53:15.875853"], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$/CyyvWXal7hLoqF/3fc6BOB4FJ1oTpto4k.infHXLi0XisNxgIUQC"], ["updated_at", "2015-11-30 00:53:15.875853"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1" for 127.0.0.1 at 2015-11-29 18:53:15 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
