@@ -1,7 +1,7 @@
 <%= form_for(@user) do |f| %>
   <%= render "shared/errors", object: @user %>
   <p>
-  Already have an account? <%= link_to 'Sign in!', new_session_path %>
+  Already have an account? <%= link_to 'Sign in!', signin_path %>
 </p>
   <fieldset>
     <ol>
