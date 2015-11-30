@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
+  resource :session
 
+  resources :users
   get "signup" => "users#new"
 
   root "events#index"
