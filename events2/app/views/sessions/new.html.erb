@@ -1,6 +1,9 @@
 <header id= "content-header">
   <h1>Sign In</h1>
 </header>
+<p>
+  No account yet? <%= link_to 'Sign up!', signup_path %>
+</p>
 
 <%= form_tag(session_path) do %> 
   <fieldset>
