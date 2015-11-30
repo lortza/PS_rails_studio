@@ -6,11 +6,11 @@
   <fieldset>
     <p>
       <%= label_tag :email %>
-      <%= email_field_tag :email, nil, autofocus: true %>
+      <%= email_field_tag :email, nil, autofocus: true, required: true %>
     </p>
     <p>
       <%= label_tag :password %>
-      <%= password_field_tag :password, nil %>
+      <%= password_field_tag :password, nil, required: true %>
     </p>
     <p><%= submit_tag "Sign In" %></p>
   </fieldset>
