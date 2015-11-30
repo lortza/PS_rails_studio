@@ -43,16 +43,13 @@ class UsersController < ApplicationController
   end #destroy
     
     
-    
-    
-    
 private
   def set_user
     @user = User.find(params[:id]) 
   end #set_user
 
   def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :username)
   end #user_params
 
 end #UsersController

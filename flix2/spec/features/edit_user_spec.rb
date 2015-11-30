@@ -31,6 +31,7 @@ describe "Editing a user" do
     visit edit_user_url(user)
 
     fill_in 'Name', with: " "
+    fill_in 'Username', with: "username"
 
     click_button "Update Account"
 
