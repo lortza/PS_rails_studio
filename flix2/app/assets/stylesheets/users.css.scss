@@ -41,8 +41,8 @@
    img {
      float: left;
      margin-right: 20px;
-     border: 3px solid $subdued-color;
-   }
+     border: 3px solid $subdued-color;  
+   } /* img */
 
    header {
      margin-bottom: 3em;
@@ -57,3 +57,7 @@
      } /* nav */
    } /* footer */
  } /* article#user */
+
+  .index-image img {
+     width: 25px; 
+   } /* .index-image */ 

@@ -1,14 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  #before_action :user_params
 
   def index
     @users = User.all 
   end #index
-
-  def show
-    #@user = User.find(params[:id]) 
-  end #show
 
   def new
     @user = User.new 
@@ -24,6 +19,10 @@ class UsersController < ApplicationController
     end 
   end #create
 
+  def show
+    #@user = User.find(params[:id]) 
+  end #show
+
   def edit
      #@user = User.find(params[:id])
   end #edit
@@ -37,7 +36,6 @@ class UsersController < ApplicationController
   end #update
 
   def destroy
-    @user.destroy
     @user.destroy
     redirect_to root_url, alert: "#{@user.name}'s Account successfully deleted!"
   end #destroy
