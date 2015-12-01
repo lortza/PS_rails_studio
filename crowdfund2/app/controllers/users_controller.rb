@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.save
     if @user.save
+      session[:user_id] = @user.id #logs in user upon account creation
       redirect_to @user, notice: "Welcome #{@user.name}! Your account has been created."
     else
       render :new
@@ -20,7 +21,6 @@ class UsersController < ApplicationController
   end #create
 
   def show
- 
   end #show
 
   def update
@@ -36,19 +36,15 @@ class UsersController < ApplicationController
     redirect_to root_url, alert: "#{@user.name}'s account has been deleted."
   end #destroy
     
-    
-    
-    
-    
 
   private
 
-  def set_user
-    @user = User.find(params[:id]) 
-  end #set_user
-    
-  def user_params
-     params.require(:user).permit(:name, :email, :username, :password, :password_confirmation)
-  end #user_params
+    def set_user
+      @user = User.find(params[:id]) 
+    end #set_user
+      
+    def user_params
+       params.require(:user).permit(:name, :email, :username, :password, :password_confirmation)
+    end #user_params
     
 end #UsersController
