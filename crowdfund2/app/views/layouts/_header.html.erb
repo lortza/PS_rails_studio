@@ -2,8 +2,16 @@
   <div id="masthead">
     <h1><%= link_to 'Crowdfund', root_path %></h1>
     <nav>
-      <%= link_to "Sign Up", signup_path, class: "button" %> 
-      <%= link_to "Sign In", signin_path, class: "button" %>
+    <p>
+      <%= link_to "All Users", users_path %> | 
+      <% if current_user %>
+        <%= link_to current_user.name, current_user %> | 
+        <%= link_to "Account Settings", edit_user_path(current_user) %>
+      <% else %>
+        <%= link_to "Sign Up", signup_path, class: "button" %> 
+        <%= link_to "Sign In", signin_path, class: "button" %>
+      <% end %>
+    </p>
     </nav>
   </div>
 </header>
