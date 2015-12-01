@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.save
     if @user.save
+      session[:user_id] = @user.id #signs in the user upon create
       redirect_to @user, notice: "Welcome #{@user.name}! Thanks for signing up!"
     else
       render :new
