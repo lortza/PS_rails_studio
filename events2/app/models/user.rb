@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
   validates :email, presence: true,
     format: /\A\S+@\S+\z/,
     uniqueness: { case_sensitive: false  }
+
+  def gravatar_id
+    Digest::MD5::hexdigest(email.downcase)
+  end #gravatar_id
+
+    def self.authenticate(email, password)
+      user = User.find_by(email: email) 
+      user && user.authenticate(password)
+    end #self.authenticate(email, password)
+      
 end #User
