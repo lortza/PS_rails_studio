@@ -7816,3 +7816,380 @@ Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-01 17:04:06 -0600
 
 
 Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-01 17:04:06 -0600
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-01 23:32:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 185ms (Views: 165.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-12-01 23:32:20 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-02 05:32:53.309045')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (59.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 137ms (Views: 126.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-01 23:32:53 -0600
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-01 23:33:12 -0600
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007fdfaa58ab60>):
+  app/controllers/application_controller.rb:8:in `require_signin'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signin rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-12-01 23:35:20 -0600
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-12-01 23:35:36 -0600
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signin rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-01 23:35:40 -0600
