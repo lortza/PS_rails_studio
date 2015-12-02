@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :show, :update, :destroy]
   before_action :require_signin, except: [:new, :create] #this method lives in the Application Controller
+  before_action :require_correct_user, only: [:edit, :update, :destroy]
 
   def new
     @user = User.new 
@@ -48,5 +49,11 @@ class UsersController < ApplicationController
     def user_params
        params.require(:user).permit(:name, :email, :username, :password, :password_confirmation)
     end #user_params
+
+    def require_correct_user
+      #@user = User.find(params[:id]) 
+      redirect_to root_url unless current_user?(@user)
+    end #require_correct_user
+      
     
 end #UsersController
