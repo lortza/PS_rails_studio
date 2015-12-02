@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :show, :update, :destroy]
+  before_action :require_signin, except: [:new, :create] #this method lives in the Application Controller
 
   def new
     @user = User.new 
