@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :reviews
+  
   has_secure_password
   validates :password, length: { minimum: 5, allow_blank: true }
   validates :name, presence: true
