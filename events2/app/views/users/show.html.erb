@@ -4,6 +4,17 @@
     <h1><%= @user.name %></h1>
     <h2><%= mail_to(@user.email) %></h2>
   </header>
+
+  <% if @registrations.any? %>
+  <h3>Registered for</h3>
+  <ul>
+    <% @registrations.each do |r| %>
+      <li><%= link_to r.event.name, r.event %>, <%= r.event.starts_at %> <br>
+      <%= time_ago_in_words(r.created_at) %> ago</li>
+    <% end %> <!-- registrations -->
+  </ul>
+  <% end %>
+
   <footer>
     <nav>
       <% if current_user?(@user) %>
