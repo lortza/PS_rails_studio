@@ -11,17 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203165421) do
+ActiveRecord::Schema.define(version: 20151203211549) do
 
   create_table "pledges", force: true do |t|
-    t.string   "name"
-    t.string   "email"
     t.text     "comment"
     t.decimal  "amount"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "city"
+    t.integer  "user_id"
   end
 
   add_index "pledges", ["project_id"], name: "index_pledges_on_project_id"
@@ -46,6 +44,7 @@ ActiveRecord::Schema.define(version: 20151203165421) do
     t.datetime "updated_at"
     t.string   "username"
     t.boolean  "admin",           default: false
+    t.string   "location"
   end
 
 end

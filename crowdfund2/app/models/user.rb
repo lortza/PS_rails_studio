@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
+  
+  has_many :pledges
+
   has_secure_password
+
   validates :password, length: { minimum: 6, allow_blank: true }
   validates :name, presence: true
   validates :email, presence: true,
