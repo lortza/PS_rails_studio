@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :registrations, dependent: :destroy
+  
   has_secure_password #this adds presence validation, confirmation validation
 
   validates :name, presence: true
