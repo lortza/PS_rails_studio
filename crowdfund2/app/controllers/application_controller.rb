@@ -23,5 +23,16 @@ private
     end #unless
   end #require_signin
 
+  def require_admin
+    unless current_user_admin?
+      redirect_to root_url, alert: "Whoops! That's for admins Only"
+    end #unless
+  end #require_admin_user
+
+  def current_user_admin?
+     current_user && current_user.admin? 
+  end #current_user_admin?
+  helper_method :current_user_admin?
+    
 
 end #ApplicationController

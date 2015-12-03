@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :show, :update, :destroy]
   before_action :require_signin, except: [:new, :create] #this method lives in the Application Controller
-  before_action :require_correct_user, only: [:edit, :update, :destroy]
+  before_action :require_correct_user, only: [:edit, :update]
+  before_action :require_admin, only: [:index, :destroy]
 
   def new
     @user = User.new 
@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   def index
     @users = User.all 
   end #index
+
+  def edit
+     @user = User.find(params[:id])
+  end #edit
 
   def create
     @user = User.new(user_params)
@@ -23,9 +27,11 @@ class UsersController < ApplicationController
   end #create
 
   def show
+    @user = User.find(params[:id])
   end #show
 
   def update
+    @user = User.find(params[:id])
      if @user.update(user_params)
        redirect_to @user, notice: "#{@user.name}'s account has been successfully updated."
      else
@@ -34,9 +40,10 @@ class UsersController < ApplicationController
   end #update
   
   def destroy
+    @user = User.find(params[:id])
     @user.destroy
-    session[:user_id] = nil
-    redirect_to root_url, alert: "#{@user.name}'s account has been deleted."
+    #session[:user_id] = nil
+    redirect_to users_url, alert: "#{@user.name}'s account has been deleted."
   end #destroy
     
 
@@ -51,7 +58,7 @@ class UsersController < ApplicationController
     end #user_params
 
     def require_correct_user
-      #@user = User.find(params[:id]) 
+      @user = User.find(params[:id]) || @user.admin == true
       redirect_to root_url unless current_user?(@user)
     end #require_correct_user
       
