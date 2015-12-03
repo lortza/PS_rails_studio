@@ -16,6 +16,10 @@
         <%= f.email_field :email, size: 40 %>
       </li>
       <li class="required">
+        <%= f.label :location %>
+        <%= f.text_field :location, size: 40, placeholder: "Boise, ID" %>
+      </li>
+      <li class="required">
         <%= f.label :password %>
         <%= f.password_field :password, size: 40 %>
       </li>
