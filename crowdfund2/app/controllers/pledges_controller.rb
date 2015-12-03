@@ -50,7 +50,7 @@ private
   end #set_project
 
   def pledge_params
-      params.require(:pledge).permit(:name, :city, :email, :comment, :amount) 
+      params.require(:pledge).permit(:user_id, :comment, :amount) 
   end #pledge_params
      
     
