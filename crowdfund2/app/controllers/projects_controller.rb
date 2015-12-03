@@ -1,4 +1,8 @@
 class ProjectsController < ApplicationController
+
+  before_action :require_signin, except: [:index, :show]
+  before_action :require_admin, except: [:index, :show]
+
   def index
     @projects = Project.accepting_pledges
   end
