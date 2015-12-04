@@ -33,11 +33,19 @@
     <%= format_average_stars(@movie) %>
   </p>
   
+  <% if @reviews.any? %>
   <h3>Reviews</h3>
-  <p>
-    <%= link_to pluralize(@movie.reviews.size, "review"), 
-                  movie_reviews_path(@movie) %>
-  </p>
+  <p>See all <%= link_to pluralize(@movie.reviews.size, "Review"), movie_reviews_path(@movie) %></p>
+    <ol id="reviews">
+      <% @reviews.order("created_at DESC").take(3).each do |review| %>
+        <%= render :partial => "reviews/review", :object => review %>
+      <% end %><!-- each do -->
+    </ol>
+    <% end %> <!-- if any? -->
+
+  <h3>Write a Review</h3>
+  [form partial will go here]
+
   
   <footer>
     <%= link_to "Write Review", new_movie_review_path(@movie), 

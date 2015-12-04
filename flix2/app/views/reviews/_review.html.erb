@@ -1,0 +1,15 @@
+      <div class="review-buttons">
+       (buttons TBD)
+      </div>  <!-- review-buttons -->
+
+      <li>
+        <div class="review-image">
+        <%= profile_image_for(review.user) %>
+        </div>
+          <span class="review"><%= pluralize(review.stars, 'star') %></span>
+          <span class="user">by <%= link_to review.user.name, review.user %></span>
+          <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
+          <p>
+            &quot;<%= review.comment %>&quot;
+          </p>
+      </li>

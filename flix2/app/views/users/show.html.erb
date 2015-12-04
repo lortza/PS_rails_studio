@@ -6,6 +6,29 @@
     <h3>Member Since</h3>
     <p><%= @user.created_at.strftime("%B %Y") %></p>
   </header>
+
+  <% if @reviews.any? %>
+  <h3>Reviews by <%= @user.name %></h3>
+    <ol id="reviews">
+      <% @reviews.each do |review| %>
+        <li>
+          <div class="review-image">
+            <%= image_tag(review.movie.image_file_name) %>
+          </div>
+          <span class="review"><%= pluralize(review.stars, 'star') %></span>
+          <span class="user">for <%= link_to review.movie.title, review.movie %></span>
+          <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
+          <p>
+            &quot;<%= review.comment %>&quot;
+          </p>
+      </li>
+      <% end %> <!-- each -->
+      </ol>
+  <% end %> <!-- reviews.any? -->
+
+  
+
+
 </article>
 
 <footer>
