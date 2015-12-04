@@ -14,20 +14,20 @@
 
 article#movie {
   p {
-    padding: .5em 0;
+    padding: 0;
+    margin-top: 0;
     font-size: 1.15em;
     line-height: 1.25em;
   }
 
   h2 {
-    margin: .5em 0;
+    margin: 2em 0 0 0;
     font-size: 115%;
     color: $secondary-text-color;
   }
 
   h3 {
-    padding-bottom: .5em;
-    margin: 1em 0;
+    margin: 2em 0 0 0;
     font-size: 120%;
     border-bottom: 1px solid $subdued-color;
 
@@ -40,6 +40,12 @@ article#movie {
     float: right;
     margin: 0 0 20px 20px;
     border: 3px solid $subdued-color;
+  }
+
+  .stars-img {
+    float: left;
+    margin: 0;
+    border: 0;
   }
 
   ul.review-stats {
@@ -96,6 +102,12 @@ ul#movies {
       margin: 1em 0 0 1em;
       line-height: 1.5em;
       font-size: 1.1em;
+
+      .stars-img {
+        float: left;
+        margin: 0;
+        border: 0;
+      }
 
       th {
         width: 35%;
@@ -157,21 +169,26 @@ ol#reviews {
   list-style: none;
   padding: 0;
 
+  .review-buttons {
+    float: right;
+    font-size: .6em; 
+    margin-right: .6em;
+  } /* .review-buttons */
+
   li {
-    margin: 1em 0;
+    margin: 0em 0em 1.5em 0em;
+    background-color: $tertiary-background-color;
+    padding: .5em;
 
     span {
       &.review {
         font-weight: bold;
       }
       &.user {
-        font-size: .9em;
         font-weight: normal;
-        color: $secondary-text-color;
       }
-      
       &.date {
-        font-size: .8em;
+        font-size: .7em;
         font-weight: bold;
         color: $secondary-text-color;
       }
@@ -179,34 +196,7 @@ ol#reviews {
 
     p {
       font-size: .95em;
-    }
-  }
-}
-
-/* FAVORITES */
-
-ol#favorites {
-  font-size: 1.15em;
-  list-style: none;
-  padding: 0;
-
-  li {
-    margin: 1em 0;
-
-    span {
-      &.date {
-        font-size: .75em;
-        color: $secondary-text-color;
-      }
-    }
-    
-    a {
-      font-weight: normal;
-    }
-    
-    img {
-      margin-right: 5px;
-      vertical-align: middle;
+      margin: 0px;
     }
   }
 }
@@ -214,22 +204,29 @@ ol#favorites {
 /* FLASHES */
 
 .flash {
-  color: $primary-text-color;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 0;
+  // color: $primary-text-color;
+  border-radius: 10px;
+  padding: 20px 0px;
+  margin: 0px 0px 20px 0px;
   text-align: center;
   text-transform: uppercase;
   box-shadow: #ffc 0 0 4px;
   
   &.notice {
+    color: darken($flash-notice-color, 60%);
     background-color: $flash-notice-color;
-  }
+  } /* notice */
 
   &.alert {
+    color: darken($flash-alert-color, 60%);
     background-color: $flash-alert-color;
-  }
-}
+  } /* alert */
+
+  &.danger {
+    color: darken($flash-danger-color, 60%);
+    background-color: $flash-danger-color;
+  } /* danger */
+} /* flash */
 
 /* ERRORS */
 
