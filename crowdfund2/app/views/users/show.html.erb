@@ -10,7 +10,27 @@
     </h2>
     <h3>Member Since</h3>
     <p><%= @user.created_at.strftime("%B %Y") %></p>
+    <% if @user.admin? %>
+      (Admin)
+    <% end %>
   </header>
+
+  <% if @user.pledges.any? %>
+    <h3>Pledges</h3>
+    <ol id="pledges">
+    <% @user.pledges.order("created_at DESC").each do |pledge| %>
+      <li>
+          <span class="amount"><%= number_to_currency(pledge.amount) %></span>
+          <span class="user">for <%= link_to pledge.project.name, pledge.project %></span>
+          <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
+          <p>
+            &quot;<%= pledge.comment %>&quot;
+          </p>
+      </li>
+    <% end %> <!-- each do -->
+  <% end %><!-- if pledges.any? -->
+  </ol>
+
 </article>
 
 <footer>

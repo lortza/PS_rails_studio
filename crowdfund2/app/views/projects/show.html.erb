@@ -31,16 +31,13 @@
     </ol>
 
   <h3>Pledge to this Project</h3>
-  <%= render "pledges/form" %>
-
+  [partial will go here]
   <footer>
   
     <nav>
     <% if current_user_admin? %>
       <%= link_to "Edit", edit_project_path(@project), class: 'button' %>
-      <%= link_to "Delete", @project, 
-                  class: 'button', 
-                  method: :delete, data: { confirm: 'Are you sure you want to delete ' + @project.name + '? This action cannot be undone.' } %>
+      <%= link_to "Delete", @project, method: :delete, data: { confirm: 'Are you sure you want to delete ' + @project.name + '? This action cannot be undone.' }, class: 'button' %>
     <% end %>
     </nav>
   </footer>

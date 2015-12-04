@@ -1,5 +1,6 @@
 class PledgesController < ApplicationController
 
+  before_action :require_signin
   before_action :set_project
 
   def index #shows all of the pledges in a project
@@ -8,10 +9,12 @@ class PledgesController < ApplicationController
 
   def new #renders the form
      @pledge = @project.pledges.new
+     @pledge.user = current_user
   end #new
 
   def create #saves the new pledge to the db
     @pledge = @project.pledges.new(pledge_params)
+    @pledge.user = current_user
     if @pledge.save # this imploes true
       redirect_to project_pledges_path(@project), notice: "Thanks for supporting #{@project.name}!"
     else
@@ -40,7 +43,7 @@ class PledgesController < ApplicationController
   def destroy 
     @pledge = @project.pledges.find(params[:id])
     @pledge.destroy 
-    redirect_to project_pledges_url, alert: "#{@pledge.name}'s pledge has been deleted"
+    redirect_to project_pledges_url, alert: "#{@pledge.user.name}'s pledge has been deleted"
   end #destroy      
 
 private

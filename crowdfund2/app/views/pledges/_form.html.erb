@@ -3,18 +3,7 @@
 
   <fieldset>
     <ol>
-      <li class="required">
-        <%= f.label :name %>
-        <%= f.text_field :name, autofocus: true %>
-      </li>
-      <li>
-        <%= f.label :city %>
-        <%= f.text_field :city, placeholder: "Atlanta, GA" %>
-      </li>
-      <li class="required">
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-      </li>
+      <li><h3>Name: <%= @pledge.user.name %></h3></li> 
       <li class="required pledges-amount">
         <%= f.label :amount %>
         <% Pledge::PLEDGE_AMOUNT.each do |pledge| %>
