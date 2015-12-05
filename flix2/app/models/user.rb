@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :reviews
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_movies, through: :favorites, source: :movie
   
   has_secure_password
   validates :password, length: { minimum: 5, allow_blank: true }
