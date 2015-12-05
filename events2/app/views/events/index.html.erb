@@ -5,7 +5,12 @@
         <header>
           <%= image_for(event) %>
           <h2><%= link_to(event.name, event) %></h2>
-          <h3><%= pluralize(event.spots_left, 'spot') %> left</h3>
+          <h3>
+            <%= pluralize(event.spots_left, 'spot') %> left <br>
+            <% if event.likes.any? %>
+              <%= pluralize(event.likes.size, "like") %>
+            <% end %><!-- likes.any? -->
+          </h3>
         </header>
         <p>
           <%= truncate(event.description, length: 150, separator: ' ') %>
@@ -26,5 +31,5 @@
         </table>
       </article>
     </li>
-  <% end %>
+  <% end %><!-- event.each -->
 </ul>

@@ -5,9 +5,20 @@
     <h2><%= @event.starts_at %></h2>
   </header>
   
-  <p>
-    <%= @event.description %>
-  </p>
+  <p><%= @event.description %></p>
+
+  <% if @likes.any? %>
+    <p><%= pluralize(@likers.size, "like") %></p>
+  <% end %> <!-- likes -->
+
+  <% if @likers.any? %>
+    <ul>
+    <% @likers.each do |user| %>
+      <li><%= link_to user.name, user %></li>
+    <% end %> <!-- likers -->
+    </ul>
+  <% end %> <!-- likers.any? -->
+    
   
   <h3>Price</h3>
   <p>

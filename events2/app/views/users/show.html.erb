@@ -5,14 +5,22 @@
     <h2><%= mail_to(@user.email) %></h2>
   </header>
 
+  <% if @liked_events.any? %>
+  <h3>Liked <%= pluralize(@liked_events.size, "Event") %></h3>
+    <p>
+    <% @liked_events.each do |event| %>
+      <%= link_to event.name, event %>  
+    <% end %> <!-- liked_events -->
+    </p>
+  <% end %>
+
   <% if @registrations.any? %>
   <h3>Registered for</h3>
-  <ul>
     <% @registrations.each do |r| %>
-      <li><%= link_to r.event.name, r.event %>, <%= r.event.starts_at %> <br>
-      <%= time_ago_in_words(r.created_at) %> ago</li>
+      <h4><%= link_to r.event.name, r.event %></h4>
+      <p>Event Date: <%= r.event.starts_at %> <br>
+      Registered: <%= time_ago_in_words(r.created_at) %> ago</p>
     <% end %> <!-- registrations -->
-  </ul>
   <% end %>
 
   <footer>
