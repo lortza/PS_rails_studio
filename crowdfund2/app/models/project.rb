@@ -1,6 +1,9 @@
 class Project < ActiveRecord::Base
 
   has_many :pledges, dependent: :destroy
+  has_many :follows, dependent: :destroy
+  has_many :followers, through: :follows, source: :user
+  has_many :pledgers, through: :pledges, source: :user
 
   validates :name, presence: true
   

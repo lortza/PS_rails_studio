@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   
   has_many :pledges
+  has_many :follows, dependent: :destroy
+  has_many :followed_projects, through: :follows, source: :project
 
   has_secure_password
 
