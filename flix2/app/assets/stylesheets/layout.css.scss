@@ -158,3 +158,10 @@ aside#sidebar {
     }
   }
 }
+
+.row {
+  clear: both;
+  margin: -10px 0px 10px 0px;
+  overflow: auto; 
+} /* .row */
+

@@ -27,6 +27,17 @@
   <p>
     <%= format_total_gross(@movie) %>
   </p>
+  <div class="row">
+    <% if @fans.any? %>
+      <h3><%= pluralize(@fans.size, "Fan") %></h3>
+        <% @fans.order("created_at DESC").each do |user| %>
+          <div class="favorite">
+            <%= link_to profile_image_for(user), user %>
+            <%= link_to user.name, user %>
+          </div> <!-- favorite -->
+        <% end %> <!-- each -->
+    <% end %> <!-- if fans? -->
+  </div> <!-- row -->
   
   <h3>Average Review</h3>
   <p>
