@@ -11,7 +11,10 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @pledge = Pledge.new
     @followers = @project.followers
-  end
+    if current_user
+      @current_followed_project = current_user.follows.find_by(project_id: @project.id)
+    end #if current_user
+  end #show
 
   def edit
     @project = Project.find(params[:id])

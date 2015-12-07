@@ -22,6 +22,14 @@
     <%= @project.team_members %>
   </p>
 
+  <% if current_user %>
+    <% if @current_followed_project %>
+      <%= button_to "UnFollow", project_follow_path(@project, @current_followed_project), method: :delete, class: "button unfave" %>
+    <% else %>
+      <%= button_to "Follow", project_follows_path(@project), class: "button fave" %>
+    <% end %><!-- if current_followed_project -->
+  <% end %><!-- if current_user -->
+
   <div class="row">
     <% if @followers.any? %>
       <h3><%= pluralize(@followers.size, "Follower") %></h3>

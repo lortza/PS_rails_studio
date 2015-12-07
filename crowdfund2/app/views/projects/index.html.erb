@@ -19,8 +19,12 @@
             <td><%= number_to_currency(project.target_pledge_amount) %></td>
           </tr>
           <tr>
-            <th>Total Pledged </th>
+            <th>Total Pledged</th>
             <td><%= number_to_currency(project.total_pledged) %></td>
+          </tr>
+          <tr>
+            <th>Followers</th>
+            <td><%= pluralize(project.follows.size, "follower") %></td>
           </tr>
         </table>
       </article>

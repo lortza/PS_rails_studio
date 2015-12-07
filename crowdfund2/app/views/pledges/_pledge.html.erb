@@ -6,7 +6,7 @@
       </div>
       <li>
           <span class="amount"><%= number_to_currency(pledge.amount) %></span>
-          <span class="user">by <%= link_to pledge.user, pledge.user %></span>
+          <span class="user">by <%= link_to pledge.user.name, pledge.user %></span>
           <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
           <p>
             &quot;<%= pledge.comment %>&quot;
