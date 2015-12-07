@@ -28,6 +28,16 @@
     <%= format_total_gross(@movie) %>
   </p>
   <div class="row">
+
+  <% if current_user %>
+    <% if @current_favorite %>
+      <%= button_to "UnFave", movie_favorite_path(@movie, @current_favorite), method: :delete, class: "button unfave" %>
+    <% else %>
+      <%= button_to "Fave", movie_favorites_path(@movie), class: "button fave" %>
+    <% end %><!-- if current_favorite -->
+  <% end %><!-- if current_user -->
+
+
     <% if @fans.any? %>
       <h3><%= pluralize(@fans.size, "Fan") %></h3>
         <% @fans.order("created_at DESC").each do |user| %>
