@@ -20984,3 +20984,560 @@ Processing by PledgesController#index as HTML
   Rendered layouts/_sidebar.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFollows (20151207015449)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "follows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_follows_on_user_id" ON "follows" ("user_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_follows_on_project_id" ON "follows" ("project_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151207015449"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pledges_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pledges_on_project_id' AND type='index'
+[0m
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-06 20:09:00 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_flashes.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 489ms (Views: 465.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 20:09:01 -0600
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-07 02:09:01.055415')  ORDER BY pledging_ends_on asc[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  Rendered projects/index.html.erb within layouts/application (43.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 130ms (Views: 123.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-12-06 20:09:03 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1[0m  [["project_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36mPledge Load (0.3ms)[0m  [1mSELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered pledges/_pledge.html.erb (2.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (41.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 121.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-12-06 20:11:39 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1[0m  [["project_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered pledges/_pledge.html.erb (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."name" = 'User 1' LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "follows" ("created_at", "project_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2015-12-07 02:13:03.636161"], ["project_id", 2], ["updated_at", "2015-12-07 02:13:03.636161"], ["user_id", 11]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 20:13:11 -0600
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-07 02:13:11.592068')  ORDER BY pledging_ends_on asc
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  Rendered projects/index.html.erb within layouts/application (6.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.6ms)
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."name" = 'Bonfire Project' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "follows" ("created_at", "project_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2015-12-07 02:13:45.161734"], ["project_id", 3], ["updated_at", "2015-12-07 02:13:45.161734"], ["user_id", 11]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-12-06 20:13:47 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered pledges/_pledge.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 1.0ms)
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."name" = 'Everybody Loves Cheese' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "follows" ("created_at", "project_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2015-12-07 02:14:12.001190"], ["project_id", 6], ["updated_at", "2015-12-07 02:14:12.001190"], ["user_id", 11]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."name" = 'Cape Caper Project' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "follows" ("created_at", "project_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2015-12-07 02:14:27.249176"], ["project_id", 9], ["updated_at", "2015-12-07 02:14:27.249176"], ["user_id", 11]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2015-12-06 20:14:29 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:14:33 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    16:   </header>
+    17: 
+    18:   <div class="row">
+    19:     <% if @followed_projects.any? %>
+    20:       <h3><%= pluralize(@followed_projects.size, "Followed Project") %></h3>
+    21:         <% @followed_projects.order("created_at DESC").each do |project| %>
+    22:           <div class="follow">
+  app/views/users/show.html.erb:19:in `_app_views_users_show_html_erb___3772642529433343159_70136192941300'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:14:33 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    16:   </header>
+    17: 
+    18:   <div class="row">
+    19:     <% if @followed_projects.any? %>
+    20:       <h3><%= pluralize(@followed_projects.size, "Followed Project") %></h3>
+    21:         <% @followed_projects.order("created_at DESC").each do |project| %>
+    22:           <div class="follow">
+  app/views/users/show.html.erb:19:in `_app_views_users_show_html_erb___3772642529433343159_70136183527560'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:15:57 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `favorite_movies' for #<User:0x007f93b479cc38>):
+  app/controllers/users_controller.rb:31:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:15:57 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `favorite_movies' for #<User:0x007f93b44acff0>):
+  app/controllers/users_controller.rb:31:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.8ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:16:49 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mProject Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  [["user_id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mPledge Exists (0.1ms)[0m  SELECT  1 AS one FROM "pledges"  WHERE "pledges"."user_id" = ? LIMIT 1  [["user_id", 11]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 107ms (Views: 89.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-12-06 20:17:45 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mPledge Load (0.3ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pledges/_pledge.html.erb (4.0ms)
+  Rendered projects/show.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     6:       </div>
+     7:       <li>
+     8:           <span class="amount"><%= number_to_currency(pledge.amount) %></span>
+     9:           <span class="user">by <%= link_to pledge.user.name, pledge.user %></span>
+    10:           <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
+    11:           <p>
+    12:             &quot;<%= pledge.comment %>&quot;
+  app/views/pledges/_pledge.html.erb:9:in `_app_views_pledges__pledge_html_erb___3406958710240643290_70136225846940'
+  app/views/projects/show.html.erb:41:in `block in _app_views_projects_show_html_erb___237224468303519592_70136226546420'
+  app/views/projects/show.html.erb:40:in `each'
+  app/views/projects/show.html.erb:40:in `_app_views_projects_show_html_erb___237224468303519592_70136226546420'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-12-06 20:17:45 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pledges/_pledge.html.erb (2.3ms)
+  Rendered projects/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     6:       </div>
+     7:       <li>
+     8:           <span class="amount"><%= number_to_currency(pledge.amount) %></span>
+     9:           <span class="user">by <%= link_to pledge.user.name, pledge.user %></span>
+    10:           <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
+    11:           <p>
+    12:             &quot;<%= pledge.comment %>&quot;
+  app/views/pledges/_pledge.html.erb:9:in `_app_views_pledges__pledge_html_erb___3406958710240643290_70136194229300'
+  app/views/projects/show.html.erb:41:in `block in _app_views_projects_show_html_erb___237224468303519592_70136204700240'
+  app/views/projects/show.html.erb:40:in `each'
+  app/views/projects/show.html.erb:40:in `_app_views_projects_show_html_erb___237224468303519592_70136204700240'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-12-06 20:19:36 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pledges/_pledge.html.erb (2.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 83.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:19:52 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  [["user_id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mPledge Exists (0.1ms)[0m  SELECT  1 AS one FROM "pledges"  WHERE "pledges"."user_id" = ? LIMIT 1  [["user_id", 11]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2015-12-06 20:19:54 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1[0m  [["project_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  [["project_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC[0m  [["project_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36mPledge Load (0.2ms)[0m  [1mSELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3[0m  [["project_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 87.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:20:02 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ? LIMIT 1  [["user_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  ORDER BY created_at DESC  [["user_id", 11]]
+  [1m[36mPledge Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pledges"  WHERE "pledges"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT "pledges".* FROM "pledges"  WHERE "pledges"."user_id" = ?  ORDER BY created_at DESC  [["user_id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 79.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2015-12-06 20:20:04 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered pledges/_pledge.html.erb (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered pledges/_pledge.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 89.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:20:08 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  [["user_id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mPledge Exists (0.1ms)[0m  SELECT  1 AS one FROM "pledges"  WHERE "pledges"."user_id" = ? LIMIT 1  [["user_id", 11]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-12-06 20:20:09 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mPledge Load (0.1ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pledges/_pledge.html.erb (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2015-12-06 20:20:12 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  [["user_id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "follows" ON "projects"."id" = "follows"."project_id" WHERE "follows"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mPledge Exists (0.1ms)[0m  SELECT  1 AS one FROM "pledges"  WHERE "pledges"."user_id" = ? LIMIT 1  [["user_id", 11]]
+  [1m[36mPledge Load (0.1ms)[0m  [1mSELECT "pledges".* FROM "pledges"  WHERE "pledges"."user_id" = ?  ORDER BY created_at DESC[0m  [["user_id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.7ms)
