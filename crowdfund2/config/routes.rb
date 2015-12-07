@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :follows
-
   resource :session
   get "signin" => "sessions#new"
 
@@ -12,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :pledges # nests pledges within projects
+    resources :follows
   end #projects
 
 end #routes
