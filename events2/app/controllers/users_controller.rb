@@ -53,7 +53,7 @@ private
   
   def set_user
      @user = User.find(params[:id]) 
-  end #load_user
+  end #set_user
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation) 
