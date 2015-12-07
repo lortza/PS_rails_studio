@@ -165,5 +165,11 @@ aside#sidebar {
 .col-66 {
   width: 66%; 
 } /* .col-55 */ 
-  
+
+.row {
+  clear: both;
+  margin: -10px 0px 10px 0px;
+  overflow: auto; 
+} /* .row */
+
 

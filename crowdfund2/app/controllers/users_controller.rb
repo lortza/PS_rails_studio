@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @followed_projects = @user.followed_projects
   end #show
 
   def update

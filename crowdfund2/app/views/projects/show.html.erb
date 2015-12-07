@@ -22,6 +22,18 @@
     <%= @project.team_members %>
   </p>
 
+  <div class="row">
+    <% if @followers.any? %>
+      <h3><%= pluralize(@followers.size, "Follower") %></h3>
+        <% @followers.order("created_at DESC").each do |user| %>
+          <div class="follow">
+            <%= link_to profile_image_for(user), user %>
+            <%= link_to user.name, user %>
+          </div> <!-- follow -->
+        <% end %> <!-- each -->
+    <% end %> <!-- if followers? -->
+  </div> <!-- row -->
+
   <h3><%= pluralize(@project.pledges.size, "Pledge") %> <span style="font-weight: normal;"><%= link_to "See All Pledges", project_pledges_path(@project) %></span></h3>
 
     <ol id="pledges">
