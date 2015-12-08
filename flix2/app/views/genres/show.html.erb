@@ -1,0 +1,24 @@
+<article id="user">
+  <header>
+    <h1><%= @genre.name %>: <%= pluralize(@genre.movies.size, "Movie") %></h1>
+  </header>
+
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="movie-tile">
+        <%= link_to image_tag(movie.image_file_name), movie %>
+      </div><!-- movie-tile -->
+    <% end %><!-- movies each -->
+  </div> <!-- row -->
+  
+  <footer>
+  <% if current_user_admin? %>
+    <nav>
+      <%= link_to 'Edit', edit_genre_path(@genre), class: 'button' %>
+      <%= link_to 'Delete', @genre, 
+                  class: 'button',
+                  method: :delete, data: { confirm: 'Are you sure?' } %>
+    </nav>
+  <% end %><!-- current user admin? -->
+  </footer>
+</article>

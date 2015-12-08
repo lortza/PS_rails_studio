@@ -1,0 +1,17 @@
+<header id="content-header">
+  <h1>Find a Movie By Genre</h1>
+</header>
+<% if current_user_admin? %>
+  <%= link_to "Add a Genre", new_genre_path, class: "button" %>
+<% end %> <!-- current suer admin -->
+<ul>
+  <% @genres.order("name").each do |genre| %>
+    <li>
+      <%= link_to genre.name, genre %>
+      <% if current_user_admin? %>:  
+        <%= link_to 'Edit', edit_genre_path(genre) %> | 
+        <%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure you want to delete ' + genre.name + '?' } %>
+      <% end %> <!-- current user admin -->
+    </li>
+  <% end %>
+</ul>
