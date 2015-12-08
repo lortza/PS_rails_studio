@@ -29,9 +29,17 @@
   </p>
   <div class="row">
 
+  <h3>Genres</h3>
+  <ul>
+    <% @genres.each do |genre| %>
+      <li><%= genre.name %></li>
+    <% end %> <!-- genres -->
+
+  </ul>
+
   <% if current_user %>
     <% if @current_favorite %>
-      <%= button_to "UnFave", movie_favorite_path(@movie, @current_favorite) method: :delete, class: "button unfave" %>
+      <%= button_to "UnFave", movie_favorite_path(@movie, @current_favorite), method: :delete, class: "button unfave" %>
     <% else %>
       <%= button_to "Fave", movie_favorites_path(@movie), class: "button fave" %>
     <% end %><!-- if current_favorite -->

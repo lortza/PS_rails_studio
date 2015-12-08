@@ -3,6 +3,8 @@ class Movie < ActiveRecord::Base
   has_many :favorites, dependent: :destroy
   has_many :fans, through: :favorites, source: :user
   has_many :critics, through: :reviews, source: :user #users who have left reviews
+  has_many :genrefications, dependent: :destroy
+  has_many :genres, through: :genrefications
 
   validates :title, presence: true
   validates :released_on, :duration, presence: true
