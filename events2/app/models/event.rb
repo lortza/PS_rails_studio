@@ -1,4 +1,10 @@
 class Event < ActiveRecord::Base
+  has_many :registrations, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :likers, through: :likes, source: :user
+  has_many :categorizations, dependent: :destroy
+  has_many :categories, through: :categorizations
+
   validates :name, presence: true
 
   validates :location, presence: true
@@ -14,9 +20,6 @@ class Event < ActiveRecord::Base
     message: "must reference a GIF, JPG, or PNG image"
   }
     
-  has_many :registrations, dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :likers, through: :likes, source: :user
   
   def self.upcoming
     where('starts_at >= ?', Time.now).order(:starts_at)

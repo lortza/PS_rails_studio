@@ -11,6 +11,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @likers = @event.likers
     @likes = @event.likes
+    @categories = @event.categories
     if current_user
       @current_like = current_user.likes.find_by(event_id: @event.id)
     end #if current_user
@@ -26,8 +27,8 @@ class EventsController < ApplicationController
       redirect_to @event, notice: "Event successfully updated!"
     else
       render :edit
-    end
-  end
+    end #if
+  end #update
   
   def new
     @event = Event.new
@@ -39,8 +40,8 @@ class EventsController < ApplicationController
       redirect_to @event, notice: "Event successfully created!"
     else
       render :new
-    end
-  end
+    end #if
+  end #create
 
   def destroy
     @event = Event.find(params[:id])
@@ -51,7 +52,7 @@ class EventsController < ApplicationController
 private
 
   def event_params
-    params.require(:event).permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity)
+    params.require(:event).permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity, category_ids: [])
   end #event_params
     
 end #EventsController
