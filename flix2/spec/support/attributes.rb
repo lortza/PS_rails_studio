@@ -29,3 +29,14 @@ def user_attributes(overrides = {})
     username: "sampleusername98765"
   }.merge(overrides)
 end
+
+def admin_user_attributes(overrides = {})
+  {
+    admin: true,
+    name: "Example Admin User",
+    email: "admin@example.com",
+    password: "secret",
+    password_confirmation: "secret", 
+    username: "sampleusername12345"
+  }.merge(overrides)
+end
