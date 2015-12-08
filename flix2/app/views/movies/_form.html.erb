@@ -39,7 +39,7 @@
         <%= f.text_field :director %>
       </li>
       <li>
-        <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name) %>
+        <%= f.collection_check_boxes(:genre_ids, Genre.all.order(name: :asc), :id, :name) %>
       </li>
     </ol>
     <p>

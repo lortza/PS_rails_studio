@@ -27,14 +27,12 @@
   <p>
     <%= format_total_gross(@movie) %>
   </p>
-  <div class="row">
 
   <h3>Genres</h3>
   <ul>
     <% @genres.each do |genre| %>
-      <li><%= genre.name %></li>
+      <li><%= link_to genre.name, genre %></li>
     <% end %> <!-- genres -->
-
   </ul>
 
   <% if current_user %>
@@ -45,7 +43,7 @@
     <% end %><!-- if current_favorite -->
   <% end %><!-- if current_user -->
 
-
+  <div class="row">
     <% if @fans.any? %>
       <h3><%= pluralize(@fans.size, "Fan") %></h3>
         <% @fans.order("created_at DESC").each do |user| %>

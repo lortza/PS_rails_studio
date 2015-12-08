@@ -14,8 +14,7 @@ class ReviewsController < ApplicationController
     @review = @movie.reviews.new(review_params)
     @review.user = current_user
     if @review.save
-      redirect_to movie_reviews_path(@movie),
-        notice: "Thanks for your review!"
+      redirect_to @movie, notice: "Thanks for your review!"
     else
       render :new
     end
