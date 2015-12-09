@@ -42,6 +42,18 @@ fieldset {
     border: 1px solid $subdued-color;
   }
 
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    float: left; 
+  }
+
+  .form-columns3 {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+  }
+
   select {
     font-size: 95%;
   }

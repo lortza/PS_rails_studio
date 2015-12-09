@@ -6,9 +6,13 @@
         <%= f.label :name %>
         <%= f.text_field :name, autofocus: true %>
       </li>
-      <li>
-        <%= f.collection_check_boxes(:category_ids, Category.all.sort(:name), :id, :name) %>
-        </li>
+      <li class="required">
+        <%= f.label :name, "Category" %>
+        <p>Please select at least 1 Category:</p>
+        <div class="form-columns3">
+          <%= f.collection_check_boxes(:category_ids, Category.all.order(name: :asc), :id, :name) %>
+        </div> <!-- form-columns3 -->
+      </li>
       <li class="required">
         <%= f.label :description %>
         <%= f.text_area :description, cols: 40, rows: 7 %>
