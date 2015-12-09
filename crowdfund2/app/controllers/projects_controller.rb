@@ -27,8 +27,8 @@ class ProjectsController < ApplicationController
       redirect_to @project, notice: "Success! #{@project.name} has been updated"
     else
       render :edit
-    end
-  end
+    end #if
+  end #update
 
   def new
     @project = Project.new
