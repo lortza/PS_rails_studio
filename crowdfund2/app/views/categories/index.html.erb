@@ -1,0 +1,26 @@
+<article>
+  <header>
+    <h1>Browse by Category</h1>
+    <%= link_to "Back to All Projects", projects_path, class: "button" %>
+  </header>
+
+  <ul>
+    <% @categories.order("name").each do |category| %>
+      <li>
+        <%= link_to category.name, category %>
+        <% if current_user_admin? %>: 
+          <%= link_to "Edit", edit_category_path(category) %> | 
+          <%= link_to "Delete", category, method: :delete, data: {confimr: "Are you sure you want to delete the " + category.name + " category?"} %>
+        <% end %> <!-- current_user_admin? -->
+      </li>
+    <% end %> <!-- categories.each -->    
+  </ul>
+  <nav>
+    <% if current_user_admin? %>
+      <%= link_to "Create a Category", new_category_path, class: "button ok" %>
+    <% end %> <!-- current_user_admin -->
+  </nav>
+</article>
+
+
+      

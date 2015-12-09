@@ -1,0 +1,18 @@
+<article>
+  <header>
+    <h1><%= @category.name %>-Related Projects</h1>
+    <%= link_to "Back to All Projects", projects_path, class: "button" %>
+  </header>
+
+  <ul>
+    <% @projects.each do |project| %>
+      <li>
+      <%= link_to project.name, project %>
+      </li>
+    <% end %> <!-- projects.each -->
+      
+  </ul>
+    
+    
+
+</article>

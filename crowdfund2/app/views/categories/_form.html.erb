@@ -1,0 +1,19 @@
+<%= form_for(@category) do |f| %> 
+   <fieldset>
+   <ol>
+     <li class="required">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true %>
+      </li>
+   </ol>
+      <p>
+      <% if @category.new_record? %>
+        <%= f.submit "Create Category" %>
+      <% else %>
+        <%= f.submit "Update Category" %>
+      <% end %>
+        <%= link_to "Cancel", root_path, class: "button" %>
+      </p>  
+  </fieldset>
+<% end %> <!-- form_for @category -->
+  
