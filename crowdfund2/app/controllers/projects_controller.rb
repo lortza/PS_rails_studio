@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @pledge = Pledge.new
     @followers = @project.followers
+    @categories = @project.categories
     if current_user
       @current_followed_project = current_user.follows.find_by(project_id: @project.id)
     end #if current_user
@@ -51,6 +52,6 @@ class ProjectsController < ApplicationController
 private
 
   def project_params
-    params.require(:project).permit(:name, :description, :pledging_ends_on, :target_pledge_amount, :website, :team_members, :image_file_name)
+    params.require(:project).permit(:name, :description, :pledging_ends_on, :target_pledge_amount, :website, :team_members, :image_file_name, category_ids: [])
   end
 end

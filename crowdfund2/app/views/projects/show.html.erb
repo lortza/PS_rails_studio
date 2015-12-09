@@ -11,16 +11,24 @@
 
   <h3>Budget</h3>
   <p><strong>Goal: </strong> <%= number_to_currency(@project.target_pledge_amount) %> </p>
+  
   <p><strong>Total Pledged:</strong> <%= number_to_currency(@project.total_pledged) %> </p>
   <p><%= format_funding_status(@project) %></p>
+  
   <h3>Website</h3>
-  <p>
-    <%= @project.website %>
-  </p>
+  <p><%= @project.website %></p>
+  
   <h3>Team Members</h3>
-  <p>
-    <%= @project.team_members %>
-  </p>
+  <p><%= @project.team_members %></p>
+
+    <% if @categories.any? %>
+      <h3><%= pluralize(@categories.size, "Category") %></h3>
+        <ul>
+        <% @categories.order("name").each do |category| %>
+          <li><%= link_to category.name, category %></li>
+        <% end %> <!-- each -->
+        </ul>
+    <% end %> <!-- if categories? -->
 
   <% if current_user %>
     <% if @current_followed_project %>

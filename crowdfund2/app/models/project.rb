@@ -4,18 +4,16 @@ class Project < ActiveRecord::Base
   has_many :follows, dependent: :destroy
   has_many :followers, through: :follows, source: :user
   has_many :pledgers, through: :pledges, source: :user
+  has_many :categorizations, dependent: :destroy
+  has_many :categories, through: :categorizations
 
   validates :name, presence: true
-  
   validates :description, presence: true, length: { maximum: 500 }
-
   validates :target_pledge_amount, numericality: { greater_than: 0 }
-
   validates :website, format: {
     with: /https?:\/\/[\S]+\b/i,
     message: "must reference a valid URL"
   }
-  
   validates :image_file_name, format: {
     with: /\w+\.(gif|jpg|png)\z/i,
     message: "must reference a GIF, JPG, or PNG image"

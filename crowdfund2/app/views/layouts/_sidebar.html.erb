@@ -2,15 +2,18 @@
   <nav>
     <ul>  
       <% if current_user_admin? %>
-      <li class="all-projects">
-        <%= link_to "All Users", users_path, class: "button" %>
-      </li>
-      <li class="create-project">
-        <%= link_to 'Add New Project', new_project_path, class: 'button' %>
-      </li>
-      <% end %>
+        <li class="all-projects">
+          <%= link_to "All Users", users_path, class: "button" %>
+        </li>
+        <li class="create-project">
+          <%= link_to 'Add New Project', new_project_path, class: 'button' %>
+        </li>
+      <% end %><!-- if current_user_admin? -->
       <li class="all-projects">
         <%= link_to "All Projects", projects_path, class: 'button' %>
+      </li>
+      <li class="all-projects">
+        <%= link_to "Browse by Category", categories_path, class: 'button' %>
       </li>
     </ul>
   </nav>
