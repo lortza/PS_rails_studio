@@ -18,6 +18,14 @@ class GenresController < ApplicationController
 
   def edit
   end #edit
+
+  def update
+    if @genre.update(genre_params)
+      redirect_to genres_url, notice: "Success! #{@genre.name} has been updated"
+    else
+      render :edit
+    end #if
+  end #update
     
   def create
     @genre = Genre.new(genre_params)
