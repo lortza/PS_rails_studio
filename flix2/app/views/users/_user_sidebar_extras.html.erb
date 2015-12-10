@@ -1,0 +1,10 @@
+<div class="row">
+    <% if @favorite_movies.any? %>
+      <h3><%= pluralize(@favorite_movies.size, "Favorite Movie") %></h3>
+        <% @favorite_movies.order("created_at DESC").each do |movie| %>
+          <div class="favorite">
+            <%= link_to image_tag(movie.image_file_name), movie %>
+          </div> <!-- favorite -->
+        <% end %> <!-- each -->
+    <% end %> <!-- if favorites? -->
+  </div> <!-- row -->
