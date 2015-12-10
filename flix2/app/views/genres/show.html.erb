@@ -1,3 +1,5 @@
+<% content_for(:title, "#{@genre.name} Movies") %>
+
 <article id="user">
   <header>
     <h1><%= @genre.name %>: <%= pluralize(@genre.movies.size, "Movie") %></h1>

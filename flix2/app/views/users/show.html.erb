@@ -1,3 +1,5 @@
+<% content_for(:title, "#{@user.name}s Profile") %>
+
 <article id="user">
   <header>
   <%= profile_image_for(@user) %>
@@ -9,17 +11,6 @@
       <p>(Admin)</p>
     <% end %>
   </header>
-
-  <div class="row">
-    <% if @favorite_movies.any? %>
-      <h3><%= pluralize(@favorite_movies.size, "Favorite Movie") %></h3>
-        <% @favorite_movies.order("created_at DESC").each do |movie| %>
-          <div class="favorite">
-            <%= link_to image_tag(movie.image_file_name), movie %>
-          </div> <!-- favorite -->
-        <% end %> <!-- each -->
-    <% end %> <!-- if favorites? -->
-  </div> <!-- row -->
 
   <% if @reviews.any? %>
   <h3>Reviews by <%= @user.name %></h3>
@@ -52,3 +43,9 @@
     <% end %>
   </nav>
 </footer>
+
+<!-- ########## Sidebar Content ############ -->
+
+<% content_for :side do %>
+  <%= render "user_sidebar_extras" %>
+<% end %> <!-- content_for -->
