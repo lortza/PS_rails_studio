@@ -2,7 +2,7 @@
   <nav>
     <ul>  
       <li class="events">
-        <%= link_to "All Events", events_path, class: 'button' %>
+        <%= link_to "All Events", events_path, class: 'button fa' %>
       </li>
       <% if current_user_admin? %>
       <li class="create-event">
@@ -11,4 +11,5 @@
       <% end %>
     </ul>
   </nav>
+  <%= content_for(:side) %>
 </aside>

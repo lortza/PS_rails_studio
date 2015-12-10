@@ -1,3 +1,5 @@
+<% content_for(:title, @user.name) %>
+
 <article id="user">
   <header>
   <%= profile_image_for(@user) %>
@@ -5,6 +7,7 @@
     <h2><%= mail_to(@user.email) %></h2>
   </header>
 
+<% content_for(:side) do %>
   <% if @liked_events.any? %>
   <h3>Liked <%= pluralize(@liked_events.size, "Event") %></h3>
     <p>
@@ -12,7 +15,8 @@
       <%= link_to event.name, event %>  
     <% end %> <!-- liked_events -->
     </p>
-  <% end %>
+  <% end %><!-- if liked events -->
+<% end %> <!-- content_for -->
 
   <% if @registrations.any? %>
   <h3>Registered for</h3>
