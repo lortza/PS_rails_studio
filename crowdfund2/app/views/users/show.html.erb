@@ -1,3 +1,5 @@
+<% content_for :title, @user.name %>
+
 <article id="user">
   <header>
   <%= profile_image_for(@user) %>
@@ -14,17 +16,6 @@
       (Admin)
     <% end %>
   </header>
-
-  <div class="row">
-    <% if @followed_projects.any? %>
-      <h3><%= pluralize(@followed_projects.size, "Followed Project") %></h3>
-        <% @followed_projects.order("created_at DESC").each do |project| %>
-          <div class="follow">
-            <%= link_to image_tag(project.image_file_name), project %>
-          </div> <!-- follow -->
-        <% end %> <!-- each -->
-    <% end %> <!-- if favorites? -->
-  </div> <!-- row -->
 
   <% if @user.pledges.any? %>
     <h3>Pledges</h3>
@@ -54,3 +45,9 @@
     <% end %>
   </nav>
 </footer>
+
+<!-- ############ SIDEBAR CONTENT ############# -->
+
+<% content_for :side do %>
+  <%= render "user_sidebar_extras" %>
+<% end %> <!-- content_for -->

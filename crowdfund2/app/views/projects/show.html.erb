@@ -1,3 +1,5 @@
+<% content_for :title, @project.name %>
+
 <article id="project" class="project">
   <header>
     <%= image_for(@project) %>
@@ -21,15 +23,6 @@
   <h3>Team Members</h3>
   <p><%= @project.team_members %></p>
 
-    <% if @categories.any? %>
-      <h3><%= pluralize(@categories.size, "Category") %></h3>
-        <ul>
-        <% @categories.order("name").each do |category| %>
-          <li><%= link_to category.name, category %></li>
-        <% end %> <!-- each -->
-        </ul>
-    <% end %> <!-- if categories? -->
-
   <% if current_user %>
     <% if @current_followed_project %>
       <%= button_to "UnFollow", project_follow_path(@project, @current_followed_project), method: :delete, class: "button unfave" %>
@@ -38,18 +31,7 @@
     <% end %><!-- if current_followed_project -->
   <% end %><!-- if current_user -->
 
-  <div class="row">
-    <% if @followers.any? %>
-      <h3><%= pluralize(@followers.size, "Follower") %></h3>
-        <% @followers.order("created_at DESC").each do |user| %>
-          <div class="follow">
-            <%= link_to profile_image_for(user), user %>
-            <%= link_to user.name, user %>
-          </div> <!-- follow -->
-        <% end %> <!-- each -->
-    <% end %> <!-- if followers? -->
-  </div> <!-- row -->
-
+  
   <h3><%= pluralize(@project.pledges.size, "Pledge") %> <span style="font-weight: normal;"><%= link_to "See All Pledges", project_pledges_path(@project) %></span></h3>
 
     <ol id="pledges">
@@ -70,3 +52,9 @@
     </nav>
   </footer>
 </article>
+
+<!-- ############ SIDEBAR CONTENT ############# -->
+
+<% content_for :side do %>
+  <%= render "project_sidebar_extras" %>
+<% end %> <!-- content_for -->

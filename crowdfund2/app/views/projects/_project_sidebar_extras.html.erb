@@ -1,0 +1,20 @@
+    <% if @categories.any? %>
+      <h3><%= pluralize(@categories.size, "Category") %></h3>
+        <ul>
+        <% @categories.order("name").each do |category| %>
+          <li><%= link_to category.name, category %></li>
+        <% end %> <!-- each -->
+        </ul>
+    <% end %> <!-- if categories? -->
+
+<div class="row">
+    <% if @followers.any? %>
+      <h3><%= pluralize(@followers.size, "Follower") %></h3>
+        <% @followers.order("created_at DESC").each do |user| %>
+          <div class="follow">
+            <%= link_to profile_image_for(user), user %>
+            <%= link_to user.name, user %>
+          </div> <!-- follow -->
+        <% end %> <!-- each -->
+    <% end %> <!-- if followers? -->
+  </div> <!-- row -->
