@@ -10,11 +10,11 @@
 <% content_for(:side) do %>
   <% if @liked_events.any? %>
   <h3>Liked <%= pluralize(@liked_events.size, "Event") %></h3>
-    <p>
+  <ul>
     <% @liked_events.each do |event| %>
-      <%= link_to event.name, event %>  
+      <li><%= link_to event.name, event %></li>
     <% end %> <!-- liked_events -->
-    </p>
+  </ul>
   <% end %><!-- if liked events -->
 <% end %> <!-- content_for -->
 
