@@ -38547,3 +38547,101 @@ Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-12-11 11:17:00 -0600
   [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "movies"  WHERE (released_on <= '2015-12-11 19:36:11.614270') LIMIT 5) subquery_for_count
   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "movies"  WHERE (released_on <= '2015-12-11 19:36:23.445094') LIMIT 3) subquery_for_count[0m
   [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  WHERE (released_on <= '2015-12-11 19:36:53.208391') AND (released_on <= '2015-12-11 19:36:53.208733') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC LIMIT 10
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 14:06:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2015-12-11 20:06:10.617436')  ORDER BY "movies"."released_on" DESC
+  Rendered movies/index.html.erb within layouts/application (36.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_header.html.erb (20.6ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 266ms (Views: 242.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:10 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:10 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:10 -0600
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:10 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:10 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/genres.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2015-12-11 14:06:11 -0600
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-11 14:06:12 -0600
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."admin" = 'f'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."admin" = 'f'  ORDER BY "users"."name" ASC
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 78.3ms | ActiveRecord: 0.4ms)

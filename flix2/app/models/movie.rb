@@ -30,6 +30,10 @@ class Movie < ActiveRecord::Base
   scope :rated, ->(rating) { released.where(rating: rating) }
 
   scope :recent, ->(max=5) { released.limit(max) }
+
+  scope :grossed_less_than, ->(amount) { released.where('total_gross < ?', amount) }
+
+  scope :grossed_greater_than, ->(amount) { released.where('total_gross > ?', amount) }
   
   def flop?
     total_gross.blank? || total_gross < 50000000
