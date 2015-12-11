@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end #new
 
   def index
-    @users = User.all 
+    @users = User.not_admins
   end #index
 
   def edit

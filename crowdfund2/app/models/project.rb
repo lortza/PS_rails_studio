@@ -19,9 +19,9 @@ class Project < ActiveRecord::Base
     message: "must reference a GIF, JPG, or PNG image"
   }
 
-  def self.accepting_pledges
-    where("pledging_ends_on >= ?", Time.now).order("pledging_ends_on asc")
-  end
+  scope :accepting_pledges, -> { where("pledging_ends_on >= ?", Time.now).order("pledging_ends_on asc") }
+
+  scope :pledging_expired, -> { where("pledging_ends_on < ?", Date.today) }
 
   def pledging_expired?
     pledging_ends_on < Date.today
@@ -32,9 +32,9 @@ class Project < ActiveRecord::Base
   end #total_pledged
 
   def met_goal?
-      total_pledged >= target_pledge_amount
+    total_pledged >= target_pledge_amount
   end #met_goal?
-
+    
   def balance_needed
     target_pledge_amount - total_pledged
   end #balance_needed
