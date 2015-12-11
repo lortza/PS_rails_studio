@@ -2,8 +2,15 @@
   <nav>
     <ul>  
       <li class="events">
-        <%= link_to "All Events", events_path, class: 'button fa' %>
+        <%= link_to "Upcoming Events", events_path, class: 'button fa' %>
       </li>
+      <li class="events">
+        <%= link_to "Free Events", filtered_events_path(:free), class: 'button fa' %>
+      </li>
+      <li class="events">
+        <%= link_to "Past Events", filtered_events_path(:past), class: 'button fa' %>
+      </li>
+    
       <% if current_user_admin? %>
       <li class="create-event">
         <%= link_to 'Add New Event', new_event_path, class: 'button' %>

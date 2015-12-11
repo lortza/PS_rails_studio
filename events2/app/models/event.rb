@@ -19,10 +19,10 @@ class Event < ActiveRecord::Base
     with:    /\w+\.(gif|jpg|png)\z/i,
     message: "must reference a GIF, JPG, or PNG image"
   }
-    
-  scope :past, -> { where('starts_at < ?', Time.now).order(:starts_at) }
 
   scope :upcoming, -> { where('starts_at >= ?', Time.now).order(:starts_at) }
+    
+  scope :past, -> { where('starts_at < ?', Time.now).order(:starts_at) }
 
   scope :free, -> { upcoming.where(price: 0).order(:name) }
 
