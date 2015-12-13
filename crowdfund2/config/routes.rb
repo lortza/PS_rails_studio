@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   root  "projects#index"
 
+  get "projects/filter/:filter" => "projects#index", as: :filtered_projects
+
   resources :projects do
     resources :pledges # nests pledges within projects
     resources :follows
