@@ -9,8 +9,7 @@
 <ul>
   <% @genres.order("name").each do |genre| %>
     <li>
-      <%= link_to genre.name, genre %>
-      <% if current_user_admin? %>:  
+      <%= link_to genre.name, genre %><% if current_user_admin? %>:  
         <%= link_to 'Edit', edit_genre_path(genre) %> | 
         <%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure you want to delete ' + genre.name + '?' } %>
       <% end %> <!-- current user admin -->
