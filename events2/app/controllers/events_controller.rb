@@ -5,12 +5,9 @@ class EventsController < ApplicationController
   
   def index
     case params[:scope]
-    when "past"
-      @events = Event.past
-    when "free"
-      @events = Event.free
-    else
-      @events = Event.upcoming  
+    when "past" then @events = Event.past
+    when "free" then @events = Event.free
+    else @events = Event.upcoming  
     end #case  
   end #index
 
