@@ -10,7 +10,10 @@
         </li>
       <% end %><!-- if current_user_admin? -->
       <li class="all-projects">
-        <%= link_to "All Projects", projects_path, class: 'button' %>
+        <%= nav_link_to "Current Projects", filtered_projects_path(:accepting_pledges) %>
+      </li>
+      <li class="all-projects">
+        <%= nav_link_to "Past Projects", filtered_projects_path(:pledging_expired) %>
       </li>
       <li class="all-projects">
         <%= link_to "Browse by Category", categories_path, class: 'button' %>
