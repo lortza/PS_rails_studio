@@ -4,8 +4,12 @@ class ProjectsController < ApplicationController
   before_action :require_admin, except: [:index, :show]
 
   def index
-    @projects = Project.accepting_pledges
-  end
+    case params[:filter]
+    when "accepting_pledges" then @projects = Project.accepting_pledges
+    when "pledging_expired" then @projects = Project.pledging_expired
+    else @projects = Project.accepting_pledges
+    end #case
+  end #index
 
   def show
     @project = Project.find(params[:id])
