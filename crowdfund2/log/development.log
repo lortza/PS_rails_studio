@@ -28452,3 +28452,209 @@ Processing by CategoriesController#index as HTML
   Rendered layouts/_sidebar.html.erb (0.4ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSlugToCategories (20151214220012)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "categories" ADD "slug" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214220012"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categorizations_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categorizations_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categorizations_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categorizations_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pledges_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pledges_on_project_id' AND type='index'
+[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Food' AND "categories"."id" != 1) LIMIT 1[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'food' AND "categories"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 1[0m  [["slug", "food"], ["updated_at", "2015-12-14 22:03:16.275256"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Animals' AND "categories"."id" != 2) LIMIT 1
+  [1m[36mCategory Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'animals' AND "categories"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 2  [["slug", "animals"], ["updated_at", "2015-12-14 22:03:16.280716"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Technology' AND "categories"."id" != 3) LIMIT 1[0m
+  [1m[35mCategory Exists (0.0ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'technology' AND "categories"."id" != 3) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 3[0m  [["slug", "technology"], ["updated_at", "2015-12-14 22:03:16.283147"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Community' AND "categories"."id" != 4) LIMIT 1
+  [1m[36mCategory Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'community' AND "categories"."id" != 4) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 4  [["slug", "community"], ["updated_at", "2015-12-14 22:03:16.285520"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Art' AND "categories"."id" != 5) LIMIT 1[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'art' AND "categories"."id" != 5) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 5[0m  [["slug", "art"], ["updated_at", "2015-12-14 22:03:16.287850"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Children' AND "categories"."id" != 6) LIMIT 1
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'children' AND "categories"."id" != 6) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 6  [["slug", "children"], ["updated_at", "2015-12-14 22:03:16.290406"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Education' AND "categories"."id" != 7) LIMIT 1[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'education' AND "categories"."id" != 7) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 7[0m  [["slug", "education"], ["updated_at", "2015-12-14 22:03:16.292971"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Clothing' AND "categories"."id" != 8) LIMIT 1
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'clothing' AND "categories"."id" != 8) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 8  [["slug", "clothing"], ["updated_at", "2015-12-14 22:03:16.295395"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Business Startup' AND "categories"."id" != 9) LIMIT 1[0m
+  [1m[35mCategory Exists (0.0ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'business-startup' AND "categories"."id" != 9) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 9[0m  [["slug", "business-startup"], ["updated_at", "2015-12-14 22:03:16.297835"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Healthcare Bills' AND "categories"."id" != 10) LIMIT 1
+  [1m[36mCategory Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'healthcare-bills' AND "categories"."id" != 10) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 10  [["slug", "healthcare-bills"], ["updated_at", "2015-12-14 22:03:16.300349"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE ("categories"."name" = 'Zippers' AND "categories"."id" != 12) LIMIT 1[0m
+  [1m[35mCategory Exists (0.0ms)[0m  SELECT  1 AS one FROM "categories"  WHERE ("categories"."slug" = 'zippers' AND "categories"."id" != 12) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "categories" SET "slug" = ?, "updated_at" = ? WHERE "categories"."id" = 12[0m  [["slug", "zippers"], ["updated_at", "2015-12-14 22:03:16.302763"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2015-12-14 16:03:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."slug" = '2' LIMIT 1
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (ActiveRecord::RecordNotFound):
+  app/controllers/categories_controller.rb:50:in `set_category'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.9ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2015-12-14 16:03:58 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."slug" = '2' LIMIT 1[0m
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (ActiveRecord::RecordNotFound):
+  app/controllers/categories_controller.rb:50:in `set_category'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2015-12-14 16:04:06 -0600
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY name
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered categories/index.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/animals" for 127.0.0.1 at 2015-12-14 16:04:10 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"animals"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."slug" = 'animals' LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "categorizations" ON "projects"."id" = "categorizations"."project_id" WHERE "categorizations"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered categories/show.html.erb within layouts/application (5.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 104ms (Views: 92.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-12-14 16:04:19 -0600
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-14 22:04:19.774793')  ORDER BY pledging_ends_on asc[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/index.html.erb within layouts/application (19.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 118.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2015-12-14 16:04:24 -0600
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY name[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered categories/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/community" for 127.0.0.1 at 2015-12-14 16:04:35 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"community"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."slug" = 'community' LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "categorizations" ON "projects"."id" = "categorizations"."project_id" WHERE "categorizations"."category_id" = ?  [["category_id", 4]]
+  Rendered categories/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 82ms (Views: 79.5ms | ActiveRecord: 0.3ms)
