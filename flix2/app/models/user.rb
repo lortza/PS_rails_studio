@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
     format: /\A[A-Z0-9]+\z/i,
     uniqueness: { case_sensitive: false }
 
+  before_save :format_username
+  before_save :format_email
+
   scope :by_name, -> { order(:name) }
   scope :not_admins, -> { by_name.where(admin: false) }
 
@@ -24,6 +27,14 @@ class User < ActiveRecord::Base
     user = User.find_by(email: email_or_username) || User.find_by(username: email_or_username)
     user && user.authenticate(password)
   end #self.authenticate(email, password)
-      
+  
+  def format_username
+    self.username = username.downcase
+  end #format_username
+
+  def format_email
+    self.email = email.downcase 
+  end #format_email
+    
 
 end #User
