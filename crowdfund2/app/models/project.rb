@@ -7,7 +7,10 @@ class Project < ActiveRecord::Base
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
 
-  validates :name, presence: true
+  before_validation :generate_slug
+
+  validates :name, presence: true, uniqueness: true
+  validates :slug, uniqueness: true
   validates :description, presence: true, length: { maximum: 500 }
   validates :target_pledge_amount, numericality: { greater_than: 0 }
   validates :website, format: {
@@ -38,7 +41,14 @@ class Project < ActiveRecord::Base
   def balance_needed
     target_pledge_amount - total_pledged
   end #balance_needed
-    
+
+  def generate_slug
+     self.slug ||= name.parameterize if name
+  end #generate_slug
+
+  def to_param
+    slug 
+  end #to_param  
 
 end #Project
 

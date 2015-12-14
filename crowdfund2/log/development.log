@@ -28725,3 +28725,420 @@ Processing by UsersController#show as HTML
   Rendered layouts/_sidebar.html.erb (0.5ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 87ms (Views: 83.7ms | ActiveRecord: 1.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSlugToProjects (20151214220725)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "projects" ADD "slug" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214220725"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categorizations_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categorizations_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categorizations_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categorizations_on_project_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_follows_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pledges_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pledges_on_project_id' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 16:12:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-14 22:12:34.674266')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"projects", :id=>nil} missing required keys: [:id]):
+     6:       <article class="project" id="<%= dom_id(project) %>">
+     7:         <header>
+     8:           <%= image_for(project) %>
+     9:           <h2><%= link_to(project.name, project) %></h2>
+    10:         </header>
+    11:         <p>
+    12:           <%= truncate(project.description, length: 150) %>
+  app/views/projects/index.html.erb:9:in `block in _app_views_projects_index_html_erb___1695740773555501990_70211125261680'
+  app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb___1695740773555501990_70211125261680'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 16:12:34 -0600
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-14 22:12:34.761071')  ORDER BY pledging_ends_on asc[0m
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"projects", :id=>nil} missing required keys: [:id]):
+     6:       <article class="project" id="<%= dom_id(project) %>">
+     7:         <header>
+     8:           <%= image_for(project) %>
+     9:           <h2><%= link_to(project.name, project) %></h2>
+    10:         </header>
+    11:         <p>
+    12:           <%= truncate(project.description, length: 150) %>
+  app/views/projects/index.html.erb:9:in `block in _app_views_projects_index_html_erb___1695740773555501990_70211149845100'
+  app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb___1695740773555501990_70211149845100'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" DESC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProject Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'CheeseHead' AND "projects"."id" != 2) LIMIT 1[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'cheesehead' AND "projects"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "projects" SET "slug" = ?, "updated_at" = ? WHERE "projects"."id" = 2[0m  [["slug", "cheesehead"], ["updated_at", "2015-12-14 22:14:42.787905"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProject Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'CheeseHead' AND "projects"."id" != 2) LIMIT 1[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'cheesehead' AND "projects"."id" != 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'Bonfire Project' AND "projects"."id" != 3) LIMIT 1[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'bonfire-project' AND "projects"."id" != 3) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "projects" SET "slug" = ?, "updated_at" = ? WHERE "projects"."id" = 3[0m  [["slug", "bonfire-project"], ["updated_at", "2015-12-14 22:15:02.584012"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'Start-Up Project' AND "projects"."id" != 4) LIMIT 1
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'start-up-project' AND "projects"."id" != 4) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "projects" SET "slug" = ?, "updated_at" = ? WHERE "projects"."id" = 4  [["slug", "start-up-project"], ["updated_at", "2015-12-14 22:15:02.592682"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'Everybody Loves Cheese' AND "projects"."id" != 6) LIMIT 1[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'everybody-loves-cheese' AND "projects"."id" != 6) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "projects" SET "slug" = ?, "updated_at" = ? WHERE "projects"."id" = 6[0m  [["slug", "everybody-loves-cheese"], ["updated_at", "2015-12-14 22:15:02.595791"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'Cape Caper Project' AND "projects"."id" != 9) LIMIT 1
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'cape-caper-project' AND "projects"."id" != 9) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "projects" SET "slug" = ?, "updated_at" = ? WHERE "projects"."id" = 9  [["slug", "cape-caper-project"], ["updated_at", "2015-12-14 22:15:02.606503"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProject Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'Testy' AND "projects"."id" != 11) LIMIT 1[0m
+  [1m[35mProject Exists (0.1ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'testy' AND "projects"."id" != 11) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "projects" SET "slug" = ?, "updated_at" = ? WHERE "projects"."id" = 11[0m  [["slug", "testy"], ["updated_at", "2015-12-14 22:15:02.609107"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 16:16:12 -0600
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-14 22:16:12.788096')  ORDER BY pledging_ends_on asc
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?  [["project_id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?  [["project_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?  [["project_id", 3]]
+  Rendered projects/index.html.erb within layouts/application (42.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_header.html.erb (25.6ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 266ms (Views: 259.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/projects/everybody-loves-cheese" for 127.0.0.1 at 2015-12-14 16:16:15 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"everybody-loves-cheese"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'everybody-loves-cheese' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFollow Load (0.3ms)[0m  SELECT  "follows".* FROM "follows"  WHERE "follows"."user_id" = ? AND "follows"."project_id" = 6 LIMIT 1  [["user_id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 6]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mPledge Load (0.5ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered pledges/_pledge.html.erb (6.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered pledges/_pledge.html.erb (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (3.9ms)
+  [1m[35mCategory Exists (0.4ms)[0m  SELECT  1 AS one FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ? LIMIT 1  [["project_id", 6]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  ORDER BY name  [["project_id", 6]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1[0m  [["project_id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  [["project_id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC[0m  [["project_id", 6]]
+  Rendered projects/_project_sidebar_extras.html.erb (26.3ms)
+  Rendered projects/show.html.erb within layouts/application (84.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 365ms (Views: 329.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/projects/everybody-loves-cheese/edit" for 127.0.0.1 at 2015-12-14 16:16:21 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"everybody-loves-cheese"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'everybody-loves-cheese' LIMIT 1[0m
+  Rendered shared/_errors.html.erb (1.3ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  [1m[36m (0.4ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  Rendered projects/_form.html.erb (72.9ms)
+  Rendered projects/edit.html.erb within layouts/application (80.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 330ms (Views: 323.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/everybody-loves-cheese/edit" for 127.0.0.1 at 2015-12-14 16:17:49 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"everybody-loves-cheese"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'everybody-loves-cheese' LIMIT 1[0m
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered projects/_form.html.erb (11.9ms)
+  Rendered projects/edit.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+     6:         <%= f.label :name %>
+     7:         <%= f.text_field :name, autofocus: true %>
+     8:       </li>
+     9:       <% unless @movie.new_record? %>
+    10:         <li>
+    11:           <%= f.label :slug %>
+    12:           <%= f.text_field :slug, size: 30 %>
+  app/views/projects/_form.html.erb:9:in `block in _app_views_projects__form_html_erb__3130282641766334475_70211140557540'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__3130282641766334475_70211140557540'
+  app/views/projects/edit.html.erb:7:in `_app_views_projects_edit_html_erb__2256038791619923983_70211140604540'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.9ms)
+
+
+Started GET "/projects/everybody-loves-cheese/edit" for 127.0.0.1 at 2015-12-14 16:17:58 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"everybody-loves-cheese"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'everybody-loves-cheese' LIMIT 1[0m
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  Rendered projects/_form.html.erb (47.2ms)
+  Rendered projects/edit.html.erb within layouts/application (50.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 257ms (Views: 250.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/everybody-loves-cheese/edit" for 127.0.0.1 at 2015-12-14 16:18:25 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"everybody-loves-cheese"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'everybody-loves-cheese' LIMIT 1[0m
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 6]]
+  Rendered projects/_form.html.erb (38.2ms)
+  Rendered projects/edit.html.erb within layouts/application (42.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 254ms (Views: 247.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 16:18:33 -0600
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-12-14 22:18:33.699147')  ORDER BY pledging_ends_on asc
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?  [["project_id", 6]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?  [["project_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "follows"  WHERE "follows"."project_id" = ?  [["project_id", 3]]
+  Rendered projects/index.html.erb within layouts/application (23.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 244ms (Views: 238.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/projects/cape-caper-project" for 127.0.0.1 at 2015-12-14 16:18:57 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"cape-caper-project"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'cape-caper-project' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFollow Load (0.3ms)[0m  SELECT  "follows".* FROM "follows"  WHERE "follows"."user_id" = ? AND "follows"."project_id" = 9 LIMIT 1  [["user_id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mPledge Load (0.3ms)[0m  SELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3  [["project_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (3.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (3.3ms)
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ? LIMIT 1  [["project_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  ORDER BY name  [["project_id", 9]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1[0m  [["project_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  [["project_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC[0m  [["project_id", 9]]
+  Rendered projects/_project_sidebar_extras.html.erb (11.5ms)
+  Rendered projects/show.html.erb within layouts/application (52.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 272ms (Views: 261.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/projects/cape-caper-project/edit" for 127.0.0.1 at 2015-12-14 16:19:00 -0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"cape-caper-project"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'cape-caper-project' LIMIT 1[0m
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?[0m  [["project_id", 9]]
+  Rendered projects/_form.html.erb (39.8ms)
+  Rendered projects/edit.html.erb within layouts/application (44.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 277ms (Views: 270.4ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/projects/cape-caper-project" for 127.0.0.1 at 2015-12-14 16:20:40 -0600
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"68TgR9DYHshOkMqPuKk4bh77pYZcLdKcPrx+8TfACs0=", "project"=>{"name"=>"Cape Caper Project", "slug"=>"cape-caper-project", "category_ids"=>["2", "5", "12", ""], "description"=>"Let's all make capes for cats. They will affix to the neck and around the hind legs so they stay put. Most of them should be sparkly. ", "pledging_ends_on(1i)"=>"2020", "pledging_ends_on(2i)"=>"5", "pledging_ends_on(3i)"=>"9", "target_pledge_amount"=>"300", "website"=>"http://project-c.com", "team_members"=>"Tom, Harry, Sally", "image_file_name"=>"http://i1.wp.com/runeweek.com/wp-content/uploads/2015/08/qpmc.png"}, "commit"=>"Update Project", "id"=>"cape-caper-project"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'cape-caper-project' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"  WHERE "categories"."id" IN (2, 5, 12)[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mProject Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE ("projects"."name" = 'Cape Caper Project' AND "projects"."id" != 9) LIMIT 1[0m
+  [1m[35mProject Exists (0.2ms)[0m  SELECT  1 AS one FROM "projects"  WHERE ("projects"."slug" = 'cape-caper-project' AND "projects"."id" != 9) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "projects" SET "image_file_name" = ?, "updated_at" = ? WHERE "projects"."id" = 9[0m  [["image_file_name", "http://i1.wp.com/runeweek.com/wp-content/uploads/2015/08/qpmc.png"], ["updated_at", "2015-12-14 22:20:40.846619"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/cape-caper-project
+Completed 302 Found in 25ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/projects/cape-caper-project" for 127.0.0.1 at 2015-12-14 16:20:40 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"cape-caper-project"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."slug" = 'cape-caper-project' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mFollow Load (0.2ms)[0m  [1mSELECT  "follows".* FROM "follows"  WHERE "follows"."user_id" = ? AND "follows"."project_id" = 9 LIMIT 1[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("pledges"."amount") AS sum_id FROM "pledges"  WHERE "pledges"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."project_id" = ?  [["project_id", 9]]
+  [1m[36mPledge Load (0.3ms)[0m  [1mSELECT  "pledges".* FROM "pledges"  WHERE "pledges"."project_id" = ?  ORDER BY created_at DESC LIMIT 3[0m  [["project_id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pledges/_pledge.html.erb (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (3.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered pledges/_pledge.html.erb (3.7ms)
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ? LIMIT 1[0m  [["project_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  [["project_id", 9]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."project_id" = ?  ORDER BY name[0m  [["project_id", 9]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ? LIMIT 1  [["project_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?[0m  [["project_id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."user_id" WHERE "follows"."project_id" = ?  ORDER BY created_at DESC  [["project_id", 9]]
+  Rendered projects/_project_sidebar_extras.html.erb (13.8ms)
+  Rendered projects/show.html.erb within layouts/application (54.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 283ms (Views: 271.7ms | ActiveRecord: 2.9ms)

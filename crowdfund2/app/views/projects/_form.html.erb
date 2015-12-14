@@ -6,6 +6,12 @@
         <%= f.label :name %>
         <%= f.text_field :name, autofocus: true %>
       </li>
+      <% unless @project.new_record? %>
+        <li class="required">
+          <%= f.label :slug %>
+          <%= f.text_field :slug, size: 30 %>
+        </li>
+      <% end %><!-- unless -->
       <li class="required">
         <%= f.label :name, "Category" %>
         <p>Please select at least 1 Category:</p>
