@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :followed_projects, through: :follows, source: :project
 
   has_secure_password
+  before_save :format_username
+  before_save :format_email
 
   validates :password, length: { minimum: 6, allow_blank: true }
   validates :name, presence: true
@@ -26,5 +28,15 @@ class User < ActiveRecord::Base
     user = User.find_by(email: email_or_username) || User.find_by(username: email_or_username)
     user && user.authenticate(password)
   end #authenticate
+
+  def format_username
+    self.username = username.downcase 
+  end #format_username
+
+  def format_email
+    self.email = email.downcase 
+  end #format_email
+    
+    
       
 end #User
