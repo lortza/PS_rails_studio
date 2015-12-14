@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208012222) do
+ActiveRecord::Schema.define(version: 20151214202759) do
 
   create_table "favorites", force: true do |t|
     t.integer  "user_id"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20151208012222) do
     t.string   "director"
     t.string   "duration"
     t.string   "image_file_name"
+    t.string   "slug"
   end
 
   create_table "reviews", force: true do |t|
