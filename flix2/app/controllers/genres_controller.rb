@@ -57,12 +57,12 @@ class GenresController < ApplicationController
 private
   
   def set_genre
-    @genre = Genre.find(params[:id]) 
+    @genre = Genre.find_by!(slug: params[:id]) 
   end #set_genre
     
 
   def genre_params
-    params.require(:genre).permit(:name) 
+    params.require(:genre).permit(:name, :slug) 
   end #genre_params
 
 end #GenresController
