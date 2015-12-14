@@ -49,7 +49,7 @@ class PledgesController < ApplicationController
 private
 
   def set_project
-    @project = Project.find(params[:project_id]) 
+    @project = Project.find_by!(slug: params[:project_id]) 
   end #set_project
 
   def pledge_params
