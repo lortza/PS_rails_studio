@@ -35,6 +35,10 @@ class User < ActiveRecord::Base
   def format_email
     self.email = email.downcase 
   end #format_email
+
+  def to_param
+    username
+  end #to_param
     
 
 end #User
