@@ -60,7 +60,7 @@ private
   end #movie_params
 
   def set_movie
-    @movie = Movie.find(params[:id])
+    @movie = Movie.find_by!(slug: params[:id])
   end #set_movie
 end
 

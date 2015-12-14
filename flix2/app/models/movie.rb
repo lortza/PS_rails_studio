@@ -6,7 +6,10 @@ class Movie < ActiveRecord::Base
   has_many :genrefications, dependent: :destroy
   has_many :genres, through: :genrefications
 
-  validates :title, presence: true
+  before_validation :generate_slug
+
+  validates :title, presence: true, uniqueness: true
+  validates :slug, uniqueness: true
   validates :released_on, :duration, presence: true
   validates :description, length: { minimum: 25 }
   validates :total_gross, numericality: { greater_than_or_equal_to: 0 }
@@ -37,9 +40,22 @@ class Movie < ActiveRecord::Base
   
   def flop?
     total_gross.blank? || total_gross < 50000000
-  end
+  end #flip?
   
   def average_stars
     reviews.average(:stars)
-  end
-end
+  end #average_stars
+
+  def generate_slug
+    self.slug ||= title.parameterize if title
+  end #generate_slug
+
+  def to_param
+    slug
+  end #to_param
+  # def to_param
+  #   "#{id}-#{title.parameterize}"
+  # end
+
+
+end #Movie
