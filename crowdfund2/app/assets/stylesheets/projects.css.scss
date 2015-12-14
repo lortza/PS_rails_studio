@@ -43,6 +43,7 @@ article#project {
 
   img {
     float: right;
+    width: 100px;
     margin: 0 0 0 20px;
     border: 3px solid $subdued-color;
   }
@@ -69,9 +70,7 @@ article#project {
       background-color: white;
       color: darken($primary-link-color, 10%); 
      } /* &:hover */
-   } /* a */
-     
-     
+   } /* a */     
 } /* #content-header */
   
 ul#projects {
@@ -106,6 +105,7 @@ ul#projects {
 
     img {
       float: right;
+      width: 100px;
       margin: 0 0 0 20px;
       border: 3px solid $subdued-color;
     }
