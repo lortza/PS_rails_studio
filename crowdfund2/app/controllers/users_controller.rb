@@ -60,7 +60,7 @@ class UsersController < ApplicationController
     end #user_params
 
     def require_correct_user
-      @user = User.find(params[:id]) || @user.admin == true
+      @user = User.find_by!(username: params[:id]) || @user.admin == true
       redirect_to root_url unless current_user?(@user)
     end #require_correct_user
       
