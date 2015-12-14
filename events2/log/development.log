@@ -21588,3 +21588,1757 @@ Processing by EventsController#index as HTML
   Rendered layouts/_sidebar.html.erb (0.8ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:55:08.574259')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.3ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (94.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (18.3ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 295ms (Views: 272.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:55:08.896725')  ORDER BY "events"."starts_at" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 5]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 6]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 7]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_flashes.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 94.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-13 14:55:08 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-12-13 14:55:09 -0600
+
+
+Started GET "/events/filter/free" for 127.0.0.1 at 2015-12-13 14:56:41 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"free"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:56:41.384500') AND "events"."price" = 0  ORDER BY "events"."starts_at" ASC, "events"."name" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  Rendered events/index.html.erb within layouts/application (17.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (8.0ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 97.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/filter/past" for 127.0.0.1 at 2015-12-13 14:56:46 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"past"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at < '2015-12-13 20:56:46.900691')  ORDER BY "events"."starts_at" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 8]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 8]]
+  Rendered events/index.html.erb within layouts/application (9.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-12-13 14:56:46 -0600
+
+
+Started GET "/events/filter/free" for 127.0.0.1 at 2015-12-13 14:56:49 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"free"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:56:49.542959') AND "events"."price" = 0  ORDER BY "events"."starts_at" ASC, "events"."name" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  Rendered events/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-12-13 14:56:52 -0600
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:56:52.153232')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (15.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/filter/free" for 127.0.0.1 at 2015-12-13 14:56:57 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"free"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:56:57.436354') AND "events"."price" = 0  ORDER BY "events"."starts_at" ASC, "events"."name" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  Rendered events/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/filter/past" for 127.0.0.1 at 2015-12-13 14:56:59 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"past"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at < '2015-12-13 20:56:59.922355')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 8]]
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-12-13 14:57:05 -0600
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:57:05.714287')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (16.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 91.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/filter/free" for 127.0.0.1 at 2015-12-13 14:57:19 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"free"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:57:19.190708') AND "events"."price" = 0  ORDER BY "events"."starts_at" ASC, "events"."name" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  Rendered events/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/filter/past" for 127.0.0.1 at 2015-12-13 14:57:22 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"past"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at < '2015-12-13 20:57:22.082580')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 8]]
+  Rendered events/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/filter/free" for 127.0.0.1 at 2015-12-13 14:57:25 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"free"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:57:25.435300') AND "events"."price" = 0  ORDER BY "events"."starts_at" ASC, "events"."name" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  Rendered events/index.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 14:57:28 -0600
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-13 20:57:28.716230')  ORDER BY "events"."starts_at" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 5]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 6]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 7]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 13:55:13 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 19:55:13.530267')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.4ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (149.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (18.6ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 373ms (Views: 338.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:13 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:13 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:13 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:13 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-12-14 13:55:14 -0600
+
+
+Started GET "/events/1-bugsmash" for 127.0.0.1 at 2015-12-14 13:55:15 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1-bugsmash"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.8ms)[0m  [1mSELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36mCategory Load (1.4ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 94.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 13:55:31 -0600
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 19:55:31.083261')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (17.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/3-kata-camp" for 127.0.0.1 at 2015-12-14 13:55:33 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3-kata-camp"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 3 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/3-kata-camp" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3-kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.2ms)[0m  SELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 3 LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 113ms (Views: 78.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-12-14 13:56:18 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 19:56:21.189497')  ORDER BY "events"."starts_at" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 5]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 6]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 7]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (18.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 98ms (Views: 95.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-14 13:56:21 -0600
+
+
+Started GET "/events/bugsmash" for 127.0.0.1 at 2015-12-14 13:56:22 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"bugsmash"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=bugsmash):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.9ms)
+
+
+Started GET "/events/bugsmash" for 127.0.0.1 at 2015-12-14 13:56:22 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"bugsmash"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=bugsmash):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 13:56:30 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.9ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 13:56:30 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.0ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 13:57:18 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.7ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 13:57:18 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.7ms)
+
+
+Started GET "/events/bugsmash" for 127.0.0.1 at 2015-12-14 13:57:23 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"bugsmash"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=bugsmash):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.8ms)
+
+
+Started GET "/events/bugsmash" for 127.0.0.1 at 2015-12-14 13:57:23 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"bugsmash"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=bugsmash):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.1ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 13:57:32 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.2ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 13:57:32 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.8ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 13:57:42 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 13:57:43 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.6ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 13:57:46 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.5ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 13:57:46 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.5ms)
+
+
+Started GET "/events/3/kata-camp" for 127.0.0.1 at 2015-12-14 13:57:55 -0600
+
+ActionController::RoutingError (No route matches [GET] "/events/3/kata-camp"):
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/localflavor/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.1ms)
+
+
+Started GET "/events/3-kata-camp" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3-kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 3 LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 84.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-14 13:58:03 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSlugToEvents (20151214200033)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "events" ADD "slug" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214200033"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categorizations_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categorizations_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categorizations_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categorizations_on_event_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_likes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_likes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_likes_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_likes_on_event_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_registrations_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_registrations_on_event_id' AND type='index'
+[0m
+
+
+Started GET "/events/3-kata-camp" for 127.0.0.1 at 2015-12-14 14:04:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3-kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 3 LIMIT 1  [["user_id", 1]]
+  Rendered events/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"likes", :event_id=>nil, :id=>"13"} missing required keys: [:event_id]):
+    12: 
+    13:   <% if current_user %>
+    14:     <% if @current_like %>
+    15:       <%= button_to "Unlike", event_like_path(@event, @current_like), method: :delete %>
+    16:     <% else %>
+    17:       <%= button_to "Like", event_likes_path(@event) %>
+    18:     <% end %><!-- @current_like -->
+  app/views/events/show.html.erb:15:in `_app_views_events_show_html_erb___4523306881930642900_70283936207340'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.5ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:04:51 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.4ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:04:51 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'BugSmash' AND "events"."id" != 1) LIMIT 1[0m
+  [1m[35mEvent Exists (0.0ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'bugsmash' AND "events"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 1[0m  [["slug", "bugsmash"], ["updated_at", "2015-12-14 20:09:04.091367"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Hackathon' AND "events"."id" != 2) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'hackathon' AND "events"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 2[0m  [["slug", "hackathon"], ["updated_at", "2015-12-14 20:09:11.254442"]]
+  [1m[35m (4.9ms)[0m  commit transaction
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Kata Camp' AND "events"."id" != 3) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'kata-camp' AND "events"."id" != 3) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 3[0m  [["slug", "kata-camp"], ["updated_at", "2015-12-14 20:09:18.049102"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Coffee and Code' AND "events"."id" != 4) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'coffee-and-code' AND "events"."id" != 4) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 4[0m  [["slug", "coffee-and-code"], ["updated_at", "2015-12-14 20:09:24.842221"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Cocoa Cook-off' AND "events"."id" != 5) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'cocoa-cook-off' AND "events"."id" != 5) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 5[0m  [["slug", "cocoa-cook-off"], ["updated_at", "2015-12-14 20:09:29.961996"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Muppets Movie Marathon' AND "events"."id" != 6) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'muppets-movie-marathon' AND "events"."id" != 6) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 6[0m  [["slug", "muppets-movie-marathon"], ["updated_at", "2015-12-14 20:09:33.929266"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Hokey Karaoke' AND "events"."id" != 7) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'hokey-karaoke' AND "events"."id" != 7) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 7[0m  [["slug", "hokey-karaoke"], ["updated_at", "2015-12-14 20:09:37.224811"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'Rails User Group' AND "events"."id" != 8) LIMIT 1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."slug" = 'rails-user-group' AND "events"."id" != 8) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "slug" = ?, "updated_at" = ? WHERE "events"."id" = 8[0m  [["slug", "rails-user-group"], ["updated_at", "2015-12-14 20:09:40.536817"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" IS NULL LIMIT 1[0m
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:09:53 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.3ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:09:53 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 20:10:02.104573')  ORDER BY "events"."starts_at" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 5]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 6]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 7]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (28.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (8.9ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-14 14:10:02 -0600
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:10:04 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.3ms)
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:10:04 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 14:10:12 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.0ms)
+
+
+Started GET "/events/kata-camp" for 127.0.0.1 at 2015-12-14 14:10:12 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"kata-camp"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=kata-camp):
+  app/controllers/events_controller.rb:15:in `show'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 20:11:55.571756')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (26.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (11.9ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 115ms (Views: 107.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-14 14:11:55 -0600
+
+
+Started GET "/events/hackathon" for 127.0.0.1 at 2015-12-14 14:11:56 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" = 'hackathon' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 2 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 2]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 80.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/hackathon/edit" for 127.0.0.1 at 2015-12-14 14:12:00 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:26:in `edit'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.0ms)
+
+
+Started GET "/events/hackathon/edit" for 127.0.0.1 at 2015-12-14 14:12:00 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=hackathon):
+  app/controllers/events_controller.rb:26:in `edit'
+
+
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/localflavor/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.9ms)
+
+
+Started GET "/events/hackathon/edit" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"hackathon"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" = 'hackathon' LIMIT 1[0m
+  Rendered shared/_errors.html.erb (2.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.2ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".id FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/_form.html.erb (47.6ms)
+  Rendered events/edit.html.erb within layouts/application (50.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 130.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-14 14:14:24 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 20:17:01.769170')  ORDER BY "events"."starts_at" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 2]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 3]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[35mLike Exists (0.0ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 7]]
+  Rendered events/index.html.erb within layouts/application (27.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (8.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 112ms (Views: 103.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2015-12-14 14:17:01 -0600
+
+
+Started GET "/events/bugsmash" for 127.0.0.1 at 2015-12-14 14:17:03 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"bugsmash"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."slug" = 'bugsmash' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1mSELECT  "likes".* FROM "likes"  WHERE "likes"."user_id" = ? AND "likes"."event_id" = 1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."event_id" = ?  [["event_id", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories"."id" = "categorizations"."category_id" WHERE "categorizations"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 87.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/filter/free" for 127.0.0.1 at 2015-12-14 14:17:09 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"free"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  WHERE (starts_at >= '2015-12-14 20:17:09.723850') AND "events"."price" = 0  ORDER BY "events"."starts_at" ASC, "events"."name" ASC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mLike Exists (0.1ms)[0m  SELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 4]]
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 4]]
+  Rendered events/index.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/filter/past" for 127.0.0.1 at 2015-12-14 14:17:12 -0600
+Processing by EventsController#index as HTML
+  Parameters: {"scope"=>"past"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  WHERE (starts_at < '2015-12-14 20:17:12.449861')  ORDER BY "events"."starts_at" ASC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"  WHERE "registrations"."event_id" = ?  [["event_id", 8]]
+  [1m[36mLike Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "likes"  WHERE "likes"."event_id" = ? LIMIT 1[0m  [["event_id", 8]]
+  Rendered events/index.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 76ms (Views: 73.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-12-14 14:17:12 -0600

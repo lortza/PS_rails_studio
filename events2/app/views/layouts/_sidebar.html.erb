@@ -5,10 +5,10 @@
         <%= link_to "Upcoming Events", events_path, class: 'button fa' %>
       </li>
       <li class="events">
-        <%= link_to "Free Events", filtered_events_path(:free), class: 'button fa' %>
+        <%= nav_link_to "Free Events", filtered_events_path(:free) %>
       </li>
       <li class="events">
-        <%= link_to "Past Events", filtered_events_path(:past), class: 'button fa' %>
+        <%= nav_link_to "Past Events", filtered_events_path(:past) %>
       </li>
     
       <% if current_user_admin? %>

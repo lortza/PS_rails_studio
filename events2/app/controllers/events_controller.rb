@@ -2,7 +2,8 @@ class EventsController < ApplicationController
 
   before_action :require_signin, except: [:index, :show]
   before_action :require_admin, except: [:index, :show]
-  
+  before_action :set_event, only: [:show, :edit, :update, :destroy] #pragmaticstudios put this action last
+
   def index
     case params[:scope]
     when "past" then @events = Event.past
@@ -12,7 +13,7 @@ class EventsController < ApplicationController
   end #index
 
   def show
-    @event = Event.find(params[:id])
+    #@event = Event.find(params[:id])
     @likers = @event.likers
     @likes = @event.likes
     @categories = @event.categories
@@ -22,11 +23,11 @@ class EventsController < ApplicationController
   end
   
   def edit
-    @event = Event.find(params[:id])
+    #@event = Event.find(params[:id])
   end
   
   def update
-    @event = Event.find(params[:id])
+    #@event = Event.find(params[:id])
     if @event.update(event_params)
       redirect_to @event, notice: "Event successfully updated!"
     else
@@ -48,7 +49,7 @@ class EventsController < ApplicationController
   end #create
 
   def destroy
-    @event = Event.find(params[:id])
+    #@event = Event.find(params[:id])
     @event.destroy
     redirect_to events_url, alert: "Event successfully deleted!"
   end
@@ -58,5 +59,10 @@ private
   def event_params
     params.require(:event).permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity, category_ids: [])
   end #event_params
+
+  def set_event
+    @event = Event.find_by!(slug: params[:id]) 
+  end #set_event
+    
     
 end #EventsController
